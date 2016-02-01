@@ -12,6 +12,10 @@
 		1844E9051C5F18B200705FE3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1844E9031C5F18B200705FE3 /* Main.storyboard */; };
 		1844E9071C5F18B200705FE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1844E9061C5F18B200705FE3 /* Assets.xcassets */; };
 		1844E90A1C5F18B200705FE3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1844E9081C5F18B200705FE3 /* LaunchScreen.storyboard */; };
+		1844E9131C5F19F000705FE3 /* OAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1844E9121C5F19F000705FE3 /* OAuth.swift */; };
+		1844E9161C5F7B0F00705FE3 /* NSURL+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1844E9151C5F7B0F00705FE3 /* NSURL+Extension.swift */; };
+		1844E9191C5F887F00705FE3 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1844E9181C5F887F00705FE3 /* Defaults.swift */; };
+		1844E91B1C5F8DB300705FE3 /* FairyNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1844E91A1C5F8DB300705FE3 /* FairyNotification.swift */; };
 		DB4BCF56F304BDACD8CBE826 /* Pods_Fairy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 428847087D20C80599EE8867 /* Pods_Fairy.framework */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +27,10 @@
 		1844E9061C5F18B200705FE3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1844E9091C5F18B200705FE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1844E90B1C5F18B200705FE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1844E9121C5F19F000705FE3 /* OAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuth.swift; sourceTree = "<group>"; };
+		1844E9151C5F7B0F00705FE3 /* NSURL+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSURL+Extension.swift"; sourceTree = "<group>"; };
+		1844E9181C5F887F00705FE3 /* Defaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
+		1844E91A1C5F8DB300705FE3 /* FairyNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FairyNotification.swift; sourceTree = "<group>"; };
 		428847087D20C80599EE8867 /* Pods_Fairy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fairy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		87EA3F819AD18B1172A61BF1 /* Pods-Fairy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fairy.release.xcconfig"; path = "Pods/Target Support Files/Pods-Fairy/Pods-Fairy.release.xcconfig"; sourceTree = "<group>"; };
 		EF0E894DA83CAA61AF1DDC6D /* Pods-Fairy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fairy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Fairy/Pods-Fairy.debug.xcconfig"; sourceTree = "<group>"; };
@@ -61,6 +69,8 @@
 		1844E8FE1C5F18B200705FE3 /* Fairy */ = {
 			isa = PBXGroup;
 			children = (
+				1844E9171C5F886700705FE3 /* Tools */,
+				1844E9141C5F7AF800705FE3 /* Extension */,
 				1844E9111C5F18DC00705FE3 /* Http */,
 				1844E8FF1C5F18B200705FE3 /* AppDelegate.swift */,
 				1844E9011C5F18B200705FE3 /* ViewController.swift */,
@@ -75,8 +85,26 @@
 		1844E9111C5F18DC00705FE3 /* Http */ = {
 			isa = PBXGroup;
 			children = (
+				1844E9121C5F19F000705FE3 /* OAuth.swift */,
 			);
 			path = Http;
+			sourceTree = "<group>";
+		};
+		1844E9141C5F7AF800705FE3 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				1844E9151C5F7B0F00705FE3 /* NSURL+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		1844E9171C5F886700705FE3 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				1844E9181C5F887F00705FE3 /* Defaults.swift */,
+				1844E91A1C5F8DB300705FE3 /* FairyNotification.swift */,
+			);
+			path = Tools;
 			sourceTree = "<group>";
 		};
 		B2BACBF748381AA6559FE8E4 /* Pods */ = {
@@ -218,7 +246,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1844E9161C5F7B0F00705FE3 /* NSURL+Extension.swift in Sources */,
+				1844E9131C5F19F000705FE3 /* OAuth.swift in Sources */,
+				1844E9191C5F887F00705FE3 /* Defaults.swift in Sources */,
 				1844E9021C5F18B200705FE3 /* ViewController.swift in Sources */,
+				1844E91B1C5F8DB300705FE3 /* FairyNotification.swift in Sources */,
 				1844E9001C5F18B200705FE3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

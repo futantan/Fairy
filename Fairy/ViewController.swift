@@ -7,19 +7,34 @@
 //
 
 import UIKit
+import SafariServices
+import Alamofire
 
 class ViewController: UIViewController {
+  var safariViewController: SFSafariViewController!
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view, typically from a nib.
+
+    addObserverForNotification()
   }
 
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
+  @IBAction func clicked(sender: AnyObject) {
+    safariViewController = SFSafariViewController(URL: OAuth.Router.OAuthURL.url)
+    self.presentViewController(safariViewController, animated: true, completion: nil)
   }
 
+}
 
+extension ViewController {
+  func addObserverForNotification() {
+    NSNotificationCenter.defaultCenter().addObserver(self, selector: "fairyOAuthSuccessed", name: FairyNotification.LolitaToTimeLineNotification, object: nil)
+  }
+  
+  func fairyOAuthSuccessed() {
+    if let safariViewController = safariViewController {
+      safariViewController.dismissViewControllerAnimated(true, completion: nil)
+    }
+  }
 }
 
