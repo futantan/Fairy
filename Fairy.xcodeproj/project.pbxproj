@@ -159,6 +159,7 @@
 				TargetAttributes = {
 					1844E8FB1C5F18B200705FE3 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 9LW7P9W636;
 					};
 				};
 			};
@@ -363,6 +364,7 @@
 			baseConfigurationReference = EF0E894DA83CAA61AF1DDC6D /* Pods-Fairy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Fairy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.futantan.Fairy;
@@ -375,6 +377,7 @@
 			baseConfigurationReference = 87EA3F819AD18B1172A61BF1 /* Pods-Fairy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Fairy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.futantan.Fairy;
