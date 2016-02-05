@@ -76,7 +76,7 @@ extension ShotsCollectionViewController {
 
 extension ShotsCollectionViewController: UICollectionViewDelegateFlowLayout {
   func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
-    return UIEdgeInsetsMake(24, 19, 0, 19)
+    return UIEdgeInsetsMake(24, 14, 0, 14)
   }
 }
 
@@ -86,11 +86,11 @@ extension ShotsCollectionViewController {
     guard let collectionView = self.collectionView else { return }
     let layout = UICollectionViewFlowLayout()
     // set size
-    let itemWidth = (view.bounds.size.width - 19 * 2 - 26) / 2
+    let itemWidth = (view.bounds.size.width - 14 * 2 - 16) / 2
     layout.itemSize = CGSize(width: itemWidth, height: itemWidth * 3 / 4)
     
-    layout.minimumInteritemSpacing = 26.0
-    layout.minimumLineSpacing = 24.0
+    layout.minimumInteritemSpacing = 16.0
+    layout.minimumLineSpacing = 14.0
     
     layout.footerReferenceSize = CGSize(width: collectionView.bounds.size.width, height: 100.0)
     
