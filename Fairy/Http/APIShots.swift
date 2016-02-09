@@ -13,35 +13,44 @@ import Alamofire
 struct APIShots {
   enum Router: URLRequestConvertible {
     static let basrURLString = "https://api.dribbble.com/v1"
-    
+    static let token = "f12356ed02da3b0734617cad02791f6af03c9b4f486e2c107a7a4c6c28c70b9b"
+//    page=\(page)&per_page=50
     /// List shots
-    case ListShots(list: ShotType, timeframe: TimeFrameType, date: String, sort: SortType)
+    case ListShots(page: Int, list: ShotType, timeframe: TimeFrameType, date: String, sort: SortType)
     
-//    /// Get a shot
+//    /// Get a shot get
 //    case GetShot
 //    
-//    /// Create a shot
+//    /// Create a shot post
 //    case CreateShot
 //    
-//    /// Update a shot
+//    /// Update a shot post
 //    case UpdateShot
 //
-//    /// Delete a shot
+//    /// Delete a shot DELETE
 //    case DeleteShot
     
+    var method: Alamofire.Method {
+      switch self {
+      case .ListShots:
+        return .GET
+      }
+    }
+    
     var URLRequest: NSMutableURLRequest {
-      let result: (path: String, parameters: [String: String]) = {
+      let result: (path: String, parameters: [String: AnyObject]) = {
         switch self {
-        case .ListShots(let list, let timeframe, let date, let sort):
-          return ("/shots", ["list": list.rawValue, "timeframe": timeframe.rawValue, "date": date, "sort": sort.rawValue])
+        case .ListShots(let page, let list, let timeframe, let date, let sort):
+          return ("/shots", ["page": page, "list": list.rawValue, "timeframe": timeframe.rawValue, "date": date, "sort": sort.rawValue])
         }
       }()
       
       let URL = NSURL(string: Router.basrURLString)!
-      let URLRequest = NSURLRequest(URL: URL.URLByAppendingPathComponent(result.path))
-      let encoding = Alamofire.ParameterEncoding.URL
+      let mutableURLRequest = NSMutableURLRequest(URL: URL.URLByAppendingPathComponent(result.path))
+      mutableURLRequest.HTTPMethod = method.rawValue
+      mutableURLRequest.setValue("Bearer \(Router.token)", forHTTPHeaderField: "Authorization")
       
-      return encoding.encode(URLRequest, parameters: removeEmptyParameterInDict(result.parameters)).0
+      return Alamofire.ParameterEncoding.URL.encode(mutableURLRequest, parameters: removeEmptyParameterInDict(result.parameters)).0
     }
     
   }
@@ -107,9 +116,11 @@ extension APIShots.Router {
 
 // MARK: - Helper
 
-func removeEmptyParameterInDict(var dict: [String: String]) -> [String: String] {
+
+/// 去除字典中值为空(string 为 "")的键值对
+private func removeEmptyParameterInDict(var dict: [String: AnyObject]) -> [String: AnyObject] {
   for (key, value) in dict {
-    if value == "" {
+    if value as? String == "" {
       dict.removeValueForKey(key)
     }
   }

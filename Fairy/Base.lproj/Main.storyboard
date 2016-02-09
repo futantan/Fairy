@@ -19,7 +19,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="Cell" reuseIdentifier="Cell" id="5ne-KV-YQo">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="Cell" reuseIdentifier="ShotsCollectionViewCell" id="5ne-KV-YQo" customClass="ShotsCollectionViewCell" customModule="Fairy" customModuleProvider="target">
                                 <rect key="frame" x="100" y="64" width="400" height="300"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -27,17 +27,22 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="60P-db-CZI">
-                                            <rect key="frame" x="0.0" y="0.0" width="400" height="300"/>
+                                            <rect key="frame" x="5" y="5" width="390" height="290"/>
+                                            <color key="backgroundColor" red="0.18426397571584241" green="0.24232766586146792" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </imageView>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="60P-db-CZI" secondAttribute="bottom" id="3g9-Jp-Ug1"/>
-                                    <constraint firstItem="60P-db-CZI" firstAttribute="leading" secondItem="5ne-KV-YQo" secondAttribute="leading" id="Muk-e2-99q"/>
-                                    <constraint firstAttribute="trailing" secondItem="60P-db-CZI" secondAttribute="trailing" id="TzI-iE-Zc9"/>
-                                    <constraint firstItem="60P-db-CZI" firstAttribute="top" secondItem="5ne-KV-YQo" secondAttribute="top" id="Uru-Yi-cdg"/>
+                                    <constraint firstAttribute="bottom" secondItem="60P-db-CZI" secondAttribute="bottom" constant="5" id="Dlf-NK-Rio"/>
+                                    <constraint firstAttribute="trailing" secondItem="60P-db-CZI" secondAttribute="trailing" constant="5" id="E4B-av-DFG"/>
+                                    <constraint firstItem="60P-db-CZI" firstAttribute="leading" secondItem="5ne-KV-YQo" secondAttribute="leading" constant="5" id="Ltn-Ue-1CI"/>
+                                    <constraint firstItem="60P-db-CZI" firstAttribute="top" secondItem="5ne-KV-YQo" secondAttribute="top" constant="5" id="eYL-La-iJ9"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="aaaimage" destination="60P-db-CZI" id="txn-WN-dG4"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
