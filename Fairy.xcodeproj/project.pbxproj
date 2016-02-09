@@ -27,10 +27,17 @@
 		18F166861C661E6500E9185B /* DribbbleLinks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F166851C661E6500E9185B /* DribbbleLinks.swift */; };
 		18F166881C662F5E00E9185B /* ShotsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F166871C662F5E00E9185B /* ShotsCollectionViewCell.swift */; };
 		18F1668B1C699C9B00E9185B /* ShotsFooterCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F1668A1C699C9B00E9185B /* ShotsFooterCollectionReusableView.swift */; };
+		2B3D4F16F572CBAB786F21AB /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 510D133E9F323AFB1A278C5B /* CoreTelephony.framework */; };
+		42DD311CB9B6D5647174012E /* BuddyBuildSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D301976B532B62C68D58AB67 /* BuddyBuildSDK.framework */; };
+		656DE2063BEFEB11A8E33E8F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A07CDD4FECBA84DAF90DC5C /* QuartzCore.framework */; };
+		7F512585A5864294F1EF2B1B /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDE83B0129BE6F269B618668 /* AssetsLibrary.framework */; };
+		A48D106455D79E7D94AF6041 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0688B319E97778CEFCD7ECD9 /* SystemConfiguration.framework */; };
 		DB4BCF56F304BDACD8CBE826 /* Pods_Fairy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 428847087D20C80599EE8867 /* Pods_Fairy.framework */; };
+		E6B21AF85C60BD593CE018A9 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBE05780C4C1234A7BA8C474 /* CoreText.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0688B319E97778CEFCD7ECD9 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		1844E8FC1C5F18B200705FE3 /* Fairy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fairy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1844E8FF1C5F18B200705FE3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1844E9011C5F18B200705FE3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,7 +61,13 @@
 		18F166871C662F5E00E9185B /* ShotsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShotsCollectionViewCell.swift; sourceTree = "<group>"; };
 		18F1668A1C699C9B00E9185B /* ShotsFooterCollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShotsFooterCollectionReusableView.swift; sourceTree = "<group>"; };
 		428847087D20C80599EE8867 /* Pods_Fairy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fairy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		510D133E9F323AFB1A278C5B /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		87EA3F819AD18B1172A61BF1 /* Pods-Fairy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fairy.release.xcconfig"; path = "Pods/Target Support Files/Pods-Fairy/Pods-Fairy.release.xcconfig"; sourceTree = "<group>"; };
+		8A07CDD4FECBA84DAF90DC5C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		D301976B532B62C68D58AB67 /* BuddyBuildSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BuddyBuildSDK.framework; sourceTree = "<group>"; };
+		D9A56B65979042B7F9388F22 /* Bridging-Header.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		EBE05780C4C1234A7BA8C474 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		EDE83B0129BE6F269B618668 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		EF0E894DA83CAA61AF1DDC6D /* Pods-Fairy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fairy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Fairy/Pods-Fairy.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -64,6 +77,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB4BCF56F304BDACD8CBE826 /* Pods_Fairy.framework in Frameworks */,
+				42DD311CB9B6D5647174012E /* BuddyBuildSDK.framework in Frameworks */,
+				7F512585A5864294F1EF2B1B /* AssetsLibrary.framework in Frameworks */,
+				E6B21AF85C60BD593CE018A9 /* CoreText.framework in Frameworks */,
+				2B3D4F16F572CBAB786F21AB /* CoreTelephony.framework in Frameworks */,
+				A48D106455D79E7D94AF6041 /* SystemConfiguration.framework in Frameworks */,
+				656DE2063BEFEB11A8E33E8F /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +96,7 @@
 				1844E8FD1C5F18B200705FE3 /* Products */,
 				B2BACBF748381AA6559FE8E4 /* Pods */,
 				FF5C0FB47B17C63C8549B182 /* Frameworks */,
+				D9A56B65979042B7F9388F22 /* Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -185,6 +205,12 @@
 			isa = PBXGroup;
 			children = (
 				428847087D20C80599EE8867 /* Pods_Fairy.framework */,
+				D301976B532B62C68D58AB67 /* BuddyBuildSDK.framework */,
+				EDE83B0129BE6F269B618668 /* AssetsLibrary.framework */,
+				EBE05780C4C1234A7BA8C474 /* CoreText.framework */,
+				510D133E9F323AFB1A278C5B /* CoreTelephony.framework */,
+				0688B319E97778CEFCD7ECD9 /* SystemConfiguration.framework */,
+				8A07CDD4FECBA84DAF90DC5C /* QuartzCore.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -441,10 +467,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Fairy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.futantan.Fairy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -454,10 +485,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Fairy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.futantan.Fairy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Bridging-Header.h";
 			};
 			name = Release;
 		};
