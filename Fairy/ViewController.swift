@@ -11,7 +11,7 @@ import SafariServices
 import Alamofire
 
 class ViewController: UIViewController {
-  var safariViewController: SFSafariViewController!
+//  var safariViewController: SFSafariViewController!
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -20,8 +20,8 @@ class ViewController: UIViewController {
   }
 
   @IBAction func clicked(sender: AnyObject) {
-    safariViewController = SFSafariViewController(URL: OAuth.Router.OAuthURL.url)
-    self.presentViewController(safariViewController, animated: true, completion: nil)
+//    safariViewController = SFSafariViewController(URL: OAuth.Router.OAuthURL.url)
+//    self.presentViewController(safariViewController, animated: true, completion: nil)
   }
 
 }
@@ -32,9 +32,9 @@ extension ViewController {
   }
   
   func fairyOAuthSuccessed() {
-    if let safariViewController = safariViewController {
-      safariViewController.dismissViewControllerAnimated(true, completion: nil)
-    }
+//    if let safariViewController = safariViewController {
+//      safariViewController.dismissViewControllerAnimated(true, completion: nil)
+//    }
   }
 }
 
