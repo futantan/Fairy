@@ -83,7 +83,7 @@ extension ShotsCollectionViewController {
     layout.itemSize = CGSize(width: itemWidth, height: (itemWidth - 10) * 3 / 4 + 10)
     layout.minimumInteritemSpacing = CellItemsMargin
     layout.minimumLineSpacing = 14.0
-    layout.footerReferenceSize = CGSize(width: collectionView.bounds.size.width, height: 100.0)
+    layout.footerReferenceSize = CGSize(width: collectionView.bounds.size.width, height: 50.0)
     
     collectionView.registerClass(ShotsFooterCollectionReusableView.classForCoder(), forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: String(ShotsFooterCollectionReusableView))
     

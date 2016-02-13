@@ -18,9 +18,15 @@ class ShotsFooterCollectionReusableView: UICollectionReusableView {
   override init(frame: CGRect) {
     super.init(frame: frame)
     
-    backgroundColor = UIColor.redColor()
     spinner.startAnimating()
-    spinner.center = self.center
     addSubview(spinner)
+  }
+  
+  override func layoutSubviews() {
+    super.layoutSubviews()
+    
+    spinner.center = self.center
+    // TODO: - 24 is magic number use auto layout instead
+    spinner.center.y -= CGFloat(24.0)
   }
 }
