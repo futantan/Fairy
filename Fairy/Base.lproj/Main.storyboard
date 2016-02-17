@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="FB0-dT-y0p">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="FB0-dT-y0p">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
         <!--Shots Collection View Controller-->
@@ -28,7 +28,7 @@
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="60P-db-CZI">
                                             <rect key="frame" x="5" y="5" width="390" height="290"/>
-                                            <color key="backgroundColor" red="0.18426397571584241" green="0.24232766586146792" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </imageView>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -41,7 +41,7 @@
                                     <constraint firstItem="60P-db-CZI" firstAttribute="top" secondItem="5ne-KV-YQo" secondAttribute="top" constant="5" id="eYL-La-iJ9"/>
                                 </constraints>
                                 <connections>
-                                    <outlet property="aaaimage" destination="60P-db-CZI" id="txn-WN-dG4"/>
+                                    <outlet property="shotsImageView" destination="60P-db-CZI" id="ICN-7s-yhH"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>

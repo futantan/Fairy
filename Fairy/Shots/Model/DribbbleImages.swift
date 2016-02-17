@@ -21,7 +21,8 @@ struct DribbbleImages: ResponseObjectSerializable {
   }
   
   func maxImageURL() -> NSURL {
-    let result = hidpi ?? normal
-    return NSURL(string: result)!
+    // TODO: - 图片逻辑修改
+//    let result = hidpi ?? normal
+    return NSURL(string: teaser)!
   }
 }

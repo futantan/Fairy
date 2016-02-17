@@ -15,7 +15,7 @@ struct DribbbleTeamModel: ResponseObjectSerializable {
   let html_url: String
   let avatar_url: String
   let bio: String
-  let location: String
+  let location: String?
   let links: DribbbleLinks
   let buckets_count: Int
   let comments_received_count: Int
@@ -48,7 +48,12 @@ struct DribbbleTeamModel: ResponseObjectSerializable {
     self.html_url = representation.valueForKeyPath("html_url") as! String
     self.avatar_url = representation.valueForKeyPath("avatar_url") as! String
     self.bio = representation.valueForKeyPath("bio") as! String
-    self.location = representation.valueForKeyPath("location") as! String
+    let locationRepresentation = representation.valueForKeyPath("location")
+    if locationRepresentation is NSNull {
+      self.location = nil
+    } else {
+      self.location = locationRepresentation as? String
+    }
     self.links = DribbbleLinks(response: response, representation: representation.valueForKeyPath("links")!)!
     self.buckets_count = representation.valueForKeyPath("buckets_count") as! Int
     self.comments_received_count = representation.valueForKeyPath("comments_received_count") as! Int

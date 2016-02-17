@@ -16,6 +16,7 @@
 		1844E9161C5F7B0F00705FE3 /* NSURL+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1844E9151C5F7B0F00705FE3 /* NSURL+Extension.swift */; };
 		1844E9191C5F887F00705FE3 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1844E9181C5F887F00705FE3 /* Defaults.swift */; };
 		1844E91B1C5F8DB300705FE3 /* FairyNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1844E91A1C5F8DB300705FE3 /* FairyNotification.swift */; };
+		18889D031C74A9FC00CC6CBA /* ShotsCollectionCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18889D021C74A9FC00CC6CBA /* ShotsCollectionCellViewModel.swift */; };
 		18928D101C64B57D003B2DFB /* Http.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18928D0F1C64B57D003B2DFB /* Http.swift */; };
 		18928D151C64E01B003B2DFB /* ShotsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18928D141C64E01B003B2DFB /* ShotsCollectionViewController.swift */; };
 		18928D171C64E030003B2DFB /* DribbbleShotsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18928D161C64E030003B2DFB /* DribbbleShotsModel.swift */; };
@@ -49,6 +50,7 @@
 		1844E9151C5F7B0F00705FE3 /* NSURL+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSURL+Extension.swift"; sourceTree = "<group>"; };
 		1844E9181C5F887F00705FE3 /* Defaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
 		1844E91A1C5F8DB300705FE3 /* FairyNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FairyNotification.swift; sourceTree = "<group>"; };
+		18889D021C74A9FC00CC6CBA /* ShotsCollectionCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShotsCollectionCellViewModel.swift; sourceTree = "<group>"; };
 		18928D0F1C64B57D003B2DFB /* Http.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Http.swift; sourceTree = "<group>"; };
 		18928D141C64E01B003B2DFB /* ShotsCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShotsCollectionViewController.swift; sourceTree = "<group>"; };
 		18928D161C64E030003B2DFB /* DribbbleShotsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DribbbleShotsModel.swift; sourceTree = "<group>"; };
@@ -187,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				18F166871C662F5E00E9185B /* ShotsCollectionViewCell.swift */,
+				18889D021C74A9FC00CC6CBA /* ShotsCollectionCellViewModel.swift */,
 				18F1668A1C699C9B00E9185B /* ShotsFooterCollectionReusableView.swift */,
 			);
 			path = View;
@@ -340,6 +343,7 @@
 			files = (
 				18F166881C662F5E00E9185B /* ShotsCollectionViewCell.swift in Sources */,
 				1844E9161C5F7B0F00705FE3 /* NSURL+Extension.swift in Sources */,
+				18889D031C74A9FC00CC6CBA /* ShotsCollectionCellViewModel.swift in Sources */,
 				18BF9C091C622B6B007E9194 /* APIShots.swift in Sources */,
 				18928D151C64E01B003B2DFB /* ShotsCollectionViewController.swift in Sources */,
 				18F166841C661E0C00E9185B /* DribbbleImages.swift in Sources */,
