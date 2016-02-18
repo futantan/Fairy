@@ -20,6 +20,8 @@ class ShotsCollectionViewController: UICollectionViewController {
   var populatingCells = false // 是否正在加载
   var currentPage = 0
   
+  var isLarge = false
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     
@@ -34,6 +36,15 @@ class ShotsCollectionViewController: UICollectionViewController {
   
 }
 
+// MARK: - Target-Action
+extension ShotsCollectionViewController {
+  
+  @IBAction func changeDisplayMode(sender: UIBarButtonItem) {
+    isLarge = !isLarge
+    collectionView?.performBatchUpdates(nil, completion: nil)
+  }
+}
+
 // MARK: - UICollectionViewDataSource
 extension ShotsCollectionViewController {
   override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -41,6 +52,7 @@ extension ShotsCollectionViewController {
   }
   
   override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+    print("cell")
     let cell = collectionView.dequeueReusableCellWithReuseIdentifier(String(ShotsCollectionViewCell), forIndexPath: indexPath) as! ShotsCollectionViewCell
 
     cell.shotsCollectionCellModel = ShotsCollectionCellViewModel(dribbbleShotsModel: shotsArray[indexPath.row])
@@ -65,28 +77,44 @@ extension ShotsCollectionViewController {
   }
 }
 
+// MARK: - UICollectionViewDelegateFlowLayout
 extension ShotsCollectionViewController: UICollectionViewDelegateFlowLayout {
+
+  func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+    let num: CGFloat = isLarge ? 1.0 : 2.0
+    
+    let itemWidth = (view.bounds.size.width - CellMarginLeft * 2 - CellItemsMargin) / num
+    // (宽度-10)/(高度-10) = 4/3 10为两个border宽度
+    let itemSize = CGSize(width: itemWidth, height: (itemWidth - 10) * 3 / 4 + 10)
+    
+    return itemSize
+  }
+  
+  func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
+    return 14.0
+  }
+
+  func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat {
+    return CellItemsMargin
+  }
+  
   func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
     return UIEdgeInsetsMake(CellMarginTop, CellMarginLeft, 0, CellMarginLeft)
   }
+
+  func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
+    return CGSize(width: collectionView.bounds.size.width, height: 50.0)
+  }
+  
 }
 
 // MARK: - Helper
 extension ShotsCollectionViewController {
   private func setupView() {
     guard let collectionView = self.collectionView else { return }
-    let layout = UICollectionViewFlowLayout()
-    // set size
-    let itemWidth = (view.bounds.size.width - CellMarginLeft * 2 - CellItemsMargin) / 2
-    // (宽度-10)/(高度-10) = 4/3 10为两个border宽度
-    layout.itemSize = CGSize(width: itemWidth, height: (itemWidth - 10) * 3 / 4 + 10)
-    layout.minimumInteritemSpacing = CellItemsMargin
-    layout.minimumLineSpacing = 14.0
-    layout.footerReferenceSize = CGSize(width: collectionView.bounds.size.width, height: 50.0)
     
     collectionView.registerClass(ShotsFooterCollectionReusableView.classForCoder(), forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: String(ShotsFooterCollectionReusableView))
     
-    collectionView.collectionViewLayout = layout
     collectionView.backgroundColor = UIColor(red:0.96, green:0.96, blue:0.96, alpha:1)
     collectionView.alwaysBounceVertical = true
   }
