@@ -21,12 +21,12 @@ struct DribbbleImages: ResponseObjectSerializable {
   }
   
   func imageURL(animated: Bool) -> NSURL {
-    if (animated) {
-      let result = hidpi ?? normal
-      return NSURL(string: result)!
-    } else {
-      return NSURL(string: normal)!
-    }
-    
+//    if (animated) {
+//      let result = hidpi ?? normal
+//      return NSURL(string: result)!
+//    } else {
+//      return NSURL(string: normal)!
+//    }
+      return NSURL(string: teaser)!
   }
 }
