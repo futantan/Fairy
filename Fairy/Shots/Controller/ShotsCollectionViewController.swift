@@ -52,7 +52,6 @@ extension ShotsCollectionViewController {
   }
   
   override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-    print("cell")
     let cell = collectionView.dequeueReusableCellWithReuseIdentifier(String(ShotsCollectionViewCell), forIndexPath: indexPath) as! ShotsCollectionViewCell
 
     cell.shotsCollectionCellModel = ShotsCollectionCellViewModel(dribbbleShotsModel: shotsArray[indexPath.row])
@@ -74,6 +73,10 @@ extension ShotsCollectionViewController {
 extension ShotsCollectionViewController {
   override func collectionView(collectionView: UICollectionView, didEndDisplayingCell cell: UICollectionViewCell, forItemAtIndexPath indexPath: NSIndexPath) {
     (cell as! ShotsCollectionViewCell).cancelDownloadTask()
+  }
+  
+  override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+    performSegueWithIdentifier("showDetailShot", sender: nil)
   }
 }
 
@@ -125,6 +128,7 @@ extension ShotsCollectionViewController {
     
     populatingCells = true
     currentPage++
+    
     
     Alamofire.request(APIShots.Router.ListShots(page: currentPage, list: .Default, timeframe: .Default, date: "", sort: .Default)).responseCollection { (response: Response<[DribbbleShotsModel], NSError>) in
       func failed() { self.populatingCells = false }
