@@ -38,6 +38,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Ed0-aP-Y3n" firstAttribute="centerY" secondItem="tak-Cw-aIg" secondAttribute="centerY" id="1mb-zU-8zw"/>
+                            <constraint firstAttribute="height" constant="44" id="337-tg-nCt"/>
                             <constraint firstAttribute="trailing" secondItem="2KJ-7l-8fs" secondAttribute="trailing" id="5LS-9L-JJH"/>
                             <constraint firstAttribute="bottom" secondItem="2KJ-7l-8fs" secondAttribute="bottom" id="Bas-dW-cVq"/>
                             <constraint firstItem="AVf-5c-Z6K" firstAttribute="centerY" secondItem="tak-Cw-aIg" secondAttribute="centerY" id="GXU-Jk-euC"/>
@@ -86,12 +87,6 @@
                                     <constraint firstAttribute="width" constant="20" id="AeU-6H-6hf"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NrW-Jw-Tod">
-                                <rect key="frame" x="58" y="12" width="11" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="glA-5Q-dqc" userLabel="separator">
                                 <rect key="frame" x="106" y="0.0" width="1" height="44"/>
                                 <color key="backgroundColor" red="0.83529411760000005" green="0.83529411760000005" blue="0.83529411760000005" alpha="1" colorSpace="calibratedRGB"/>
@@ -99,6 +94,12 @@
                                     <constraint firstAttribute="width" constant="1" id="yjg-dg-evY"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NrW-Jw-Tod">
+                                <rect key="frame" x="58" y="12" width="11" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <constraints>
                             <constraint firstItem="glA-5Q-dqc" firstAttribute="top" secondItem="dOz-6s-gut" secondAttribute="top" id="DbJ-b6-rig"/>
@@ -117,6 +118,7 @@
                 <constraints>
                     <constraint firstItem="tak-Cw-aIg" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="1/3" id="6lk-6G-bSG"/>
                     <constraint firstAttribute="bottom" secondItem="tak-Cw-aIg" secondAttribute="bottom" id="8dQ-k0-Aod"/>
+                    <constraint firstItem="dOz-6s-gut" firstAttribute="height" secondItem="tak-Cw-aIg" secondAttribute="height" id="A4e-4F-Dk6"/>
                     <constraint firstItem="dsc-XI-67t" firstAttribute="leading" secondItem="dOz-6s-gut" secondAttribute="trailing" id="CGb-iY-o9w"/>
                     <constraint firstAttribute="trailing" secondItem="dsc-XI-67t" secondAttribute="trailing" id="MWt-59-OHG"/>
                     <constraint firstItem="dOz-6s-gut" firstAttribute="width" secondItem="tak-Cw-aIg" secondAttribute="width" id="Q7o-pc-ayB"/>
@@ -124,6 +126,7 @@
                     <constraint firstAttribute="trailing" secondItem="08B-uU-GbW" secondAttribute="trailing" id="dDw-jH-XmS"/>
                     <constraint firstAttribute="bottom" secondItem="dsc-XI-67t" secondAttribute="bottom" id="kZh-lE-2hg"/>
                     <constraint firstAttribute="bottom" secondItem="dOz-6s-gut" secondAttribute="bottom" id="ld2-4s-H0Z"/>
+                    <constraint firstItem="tak-Cw-aIg" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" id="pMI-yU-7Lg"/>
                     <constraint firstItem="dOz-6s-gut" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="q8p-jq-noL"/>
                     <constraint firstItem="tak-Cw-aIg" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="rbi-dR-pKA"/>
                     <constraint firstItem="08B-uU-GbW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="s1M-fi-guk"/>
@@ -137,7 +140,7 @@
                 <outlet property="favNumLabel" destination="AVf-5c-Z6K" id="qtN-Qr-sEC"/>
                 <outlet property="faviConImageView" destination="Ed0-aP-Y3n" id="uRI-M9-Wez"/>
             </connections>
-            <point key="canvasLocation" x="241" y="195"/>
+            <point key="canvasLocation" x="-404" y="193"/>
         </tableViewCell>
     </objects>
     <resources>
