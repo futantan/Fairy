@@ -1,5 +1,5 @@
 //
-//  ShotDescriptionCell.swift
+//  ShotDetailDescriptionCell.swift
 //  Fairy
 //
 //  Created by luckytantanfu on 2/26/16.
@@ -8,7 +8,9 @@
 
 import UIKit
 
-class ShotDescriptionCell: UITableViewCell {
+class ShotDetailDescriptionCell: UITableViewCell {
+  
+  @IBOutlet weak var descriptionLabel: UILabel!
   
   override func awakeFromNib() {
     super.awakeFromNib()

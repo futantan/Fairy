@@ -7,15 +7,15 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="326" id="KGk-i7-Jjw" customClass="ShotDescriptionCell" customModule="Fairy" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="326"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ShotDetailDescriptionCell" rowHeight="358" id="KGk-i7-Jjw" customClass="ShotDetailDescriptionCell" customModule="Fairy" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="358"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="326"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="358"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PNq-2l-IhQ">
-                        <rect key="frame" x="8" y="8" width="304" height="310"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OMK-8M-X8H">
+                        <rect key="frame" x="14" y="8" width="292" height="342"/>
                         <string key="text">The full on boarding flow for JIRA's iOS app.
 
 Created to educate the users as to why they should take advantage of JIRA's mobile experience.
@@ -27,13 +27,16 @@ For v1 we decided to just go with PNG sequence (Created in AE) for MVP release. 
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="PNq-2l-IhQ" secondAttribute="bottom" constant="8" id="5N0-rf-rdt"/>
-                    <constraint firstItem="PNq-2l-IhQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="LO0-SP-ggH"/>
-                    <constraint firstAttribute="trailing" secondItem="PNq-2l-IhQ" secondAttribute="trailing" constant="8" id="aoH-17-pLv"/>
-                    <constraint firstItem="PNq-2l-IhQ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="awh-UM-jVQ"/>
+                    <constraint firstAttribute="bottom" secondItem="OMK-8M-X8H" secondAttribute="bottom" constant="8" id="IoE-x9-slf"/>
+                    <constraint firstItem="OMK-8M-X8H" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="14" id="L1D-Di-Yf2"/>
+                    <constraint firstAttribute="trailing" secondItem="OMK-8M-X8H" secondAttribute="trailing" constant="14" id="Lc4-oM-4fr"/>
+                    <constraint firstItem="OMK-8M-X8H" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="tru-I7-bLI"/>
                 </constraints>
             </tableViewCellContentView>
-            <point key="canvasLocation" x="212" y="322"/>
+            <connections>
+                <outlet property="descriptionLabel" destination="OMK-8M-X8H" id="8Ji-EX-tf9"/>
+            </connections>
+            <point key="canvasLocation" x="365" y="271"/>
         </tableViewCell>
     </objects>
 </document>

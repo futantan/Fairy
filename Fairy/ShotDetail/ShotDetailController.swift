@@ -21,7 +21,7 @@ class ShotDetailController: UITableViewController {
     tableView.registerNib(UINib(nibName: String(ShotDetailDesignerInfoCell), bundle: nil), forCellReuseIdentifier: String(ShotDetailDesignerInfoCell))
     tableView.registerNib(UINib(nibName: String(ShotDetailHeaderImageCell), bundle: nil), forCellReuseIdentifier: String(ShotDetailHeaderImageCell))
     tableView.registerNib(UINib(nibName: String(ShotInfoCell), bundle: nil), forCellReuseIdentifier: String(ShotInfoCell))
-    tableView.registerNib(UINib(nibName: String(ShotDescriptionCell), bundle: nil), forCellReuseIdentifier: String(ShotDescriptionCell))
+    tableView.registerNib(UINib(nibName: String(ShotDetailDescriptionCell), bundle: nil), forCellReuseIdentifier: String(ShotDetailDescriptionCell))
     tableView.separatorStyle = .None
   }
   
@@ -77,7 +77,7 @@ class ShotDetailController: UITableViewController {
       cell = tableView.dequeueReusableCellWithIdentifier(String(ShotInfoCell), forIndexPath: indexPath) as! ShotInfoCell
       
     case .Description:
-      cell = tableView.dequeueReusableCellWithIdentifier(String(ShotDescriptionCell), forIndexPath: indexPath) as! ShotDescriptionCell
+      cell = tableView.dequeueReusableCellWithIdentifier(String(ShotDetailDescriptionCell), forIndexPath: indexPath) as! ShotDetailDescriptionCell
       
     }
     
