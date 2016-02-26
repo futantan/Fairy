@@ -87,7 +87,7 @@
 		87EA3F819AD18B1172A61BF1 /* Pods-Fairy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fairy.release.xcconfig"; path = "Pods/Target Support Files/Pods-Fairy/Pods-Fairy.release.xcconfig"; sourceTree = "<group>"; };
 		8A07CDD4FECBA84DAF90DC5C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		D301976B532B62C68D58AB67 /* BuddyBuildSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BuddyBuildSDK.framework; sourceTree = "<group>"; };
-		D9A56B65979042B7F9388F22 /* Bridging-Header.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		D9A56B65979042B7F9388F22 /* Bridging-Header.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Bridging-Header.h"; path = "../Bridging-Header.h"; sourceTree = "<group>"; };
 		EBE05780C4C1234A7BA8C474 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		EDE83B0129BE6F269B618668 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		EF0E894DA83CAA61AF1DDC6D /* Pods-Fairy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fairy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Fairy/Pods-Fairy.debug.xcconfig"; sourceTree = "<group>"; };
@@ -118,7 +118,6 @@
 				1844E8FD1C5F18B200705FE3 /* Products */,
 				B2BACBF748381AA6559FE8E4 /* Pods */,
 				FF5C0FB47B17C63C8549B182 /* Frameworks */,
-				D9A56B65979042B7F9388F22 /* Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -143,6 +142,7 @@
 				1844E9031C5F18B200705FE3 /* Main.storyboard */,
 				1844E9061C5F18B200705FE3 /* Assets.xcassets */,
 				1844E9081C5F18B200705FE3 /* LaunchScreen.storyboard */,
+				D9A56B65979042B7F9388F22 /* Bridging-Header.h */,
 				1844E90B1C5F18B200705FE3 /* Info.plist */,
 			);
 			path = Fairy;
