@@ -15,14 +15,8 @@ class ShotDetailController: UITableViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    tableView.estimatedRowHeight = 44.0
-    tableView.rowHeight = UITableViewAutomaticDimension
-
-    tableView.registerNib(UINib(nibName: String(ShotDetailDesignerInfoCell), bundle: nil), forCellReuseIdentifier: String(ShotDetailDesignerInfoCell))
-    tableView.registerNib(UINib(nibName: String(ShotDetailHeaderImageCell), bundle: nil), forCellReuseIdentifier: String(ShotDetailHeaderImageCell))
-    tableView.registerNib(UINib(nibName: String(ShotInfoCell), bundle: nil), forCellReuseIdentifier: String(ShotInfoCell))
-    tableView.registerNib(UINib(nibName: String(ShotDetailDescriptionCell), bundle: nil), forCellReuseIdentifier: String(ShotDetailDescriptionCell))
-    tableView.separatorStyle = .None
+    setupViews()
+    registerCells()
   }
   
   override func didReceiveMemoryWarning() {
@@ -84,22 +78,20 @@ class ShotDetailController: UITableViewController {
     return cell
   }
   
+}
+
+// MARK: - Helper
+extension ShotDetailController {
+  private func setupViews() {
+    tableView.estimatedRowHeight = 44.0
+    tableView.rowHeight = UITableViewAutomaticDimension
+    tableView.separatorStyle = .None
+  }
   
-  // MARK: - Table view delegate
-  
-//  override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-//    let section = ShotDetailSection(rawValue: indexPath.section)!
-//    switch section {
-//    case .DesignerInfo:
-//      return 66
-//    case .Shot:
-//      return self.view.bounds.width / 4 * 3
-//    case .ShotData:
-//      return 44
-//    case .Description:
-//      return 44
-//    }
-//  }
-  
-  
+  private func registerCells() {
+    tableView.registerNib(UINib(nibName: String(ShotDetailDesignerInfoCell), bundle: nil), forCellReuseIdentifier: String(ShotDetailDesignerInfoCell))
+    tableView.registerNib(UINib(nibName: String(ShotDetailHeaderImageCell), bundle: nil), forCellReuseIdentifier: String(ShotDetailHeaderImageCell))
+    tableView.registerNib(UINib(nibName: String(ShotInfoCell), bundle: nil), forCellReuseIdentifier: String(ShotInfoCell))
+    tableView.registerNib(UINib(nibName: String(ShotDetailDescriptionCell), bundle: nil), forCellReuseIdentifier: String(ShotDetailDescriptionCell))
+  }
 }
