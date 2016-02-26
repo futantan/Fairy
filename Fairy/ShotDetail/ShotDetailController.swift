@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import Kingfisher
 
 class ShotDetailController: UITableViewController {
+  
+  var shotModel: DribbbleShotModel?
   
   @IBOutlet weak var shotImageView: UIImageView!
   
@@ -30,7 +33,7 @@ class ShotDetailController: UITableViewController {
     /// Shot 图片
     case Shot
     /// Like | Comment | Bucket
-    case ShotData
+    case ShotInfo
     /// 描述信息
     case Description
   }
@@ -48,7 +51,7 @@ class ShotDetailController: UITableViewController {
       return 1
     case .Shot:
       return 1
-    case .ShotData:
+    case .ShotInfo:
       return 1
     case .Description:
       return 1
@@ -56,26 +59,30 @@ class ShotDetailController: UITableViewController {
   }
   
   override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    let cell: UITableViewCell
-    
     let section = ShotDetailSection(rawValue: indexPath.section)!
     switch section {
       
     case .DesignerInfo:
-      cell = tableView.dequeueReusableCellWithIdentifier(String(ShotDetailDesignerInfoCell), forIndexPath: indexPath) as! ShotDetailDesignerInfoCell
+      let cell = tableView.dequeueReusableCellWithIdentifier(String(ShotDetailDesignerInfoCell), forIndexPath: indexPath) as! ShotDetailDesignerInfoCell
+      cell.model = shotModel
+      return cell
       
     case .Shot:
-      cell = tableView.dequeueReusableCellWithIdentifier(String(ShotDetailHeaderImageCell), forIndexPath: indexPath) as! ShotDetailHeaderImageCell
+      let cell = tableView.dequeueReusableCellWithIdentifier(String(ShotDetailHeaderImageCell), forIndexPath: indexPath) as! ShotDetailHeaderImageCell
+      cell.shotImageView.kf_setImageWithURL(shotModel!.images.maxURL(), placeholderImage: nil)
+      return cell
       
-    case .ShotData:
-      cell = tableView.dequeueReusableCellWithIdentifier(String(ShotInfoCell), forIndexPath: indexPath) as! ShotInfoCell
+    case .ShotInfo:
+      let cell = tableView.dequeueReusableCellWithIdentifier(String(ShotInfoCell), forIndexPath: indexPath) as! ShotInfoCell
+      cell.model = shotModel
+      return cell
       
     case .Description:
-      cell = tableView.dequeueReusableCellWithIdentifier(String(ShotDetailDescriptionCell), forIndexPath: indexPath) as! ShotDetailDescriptionCell
-      
+      let cell = tableView.dequeueReusableCellWithIdentifier(String(ShotDetailDescriptionCell), forIndexPath: indexPath) as! ShotDetailDescriptionCell
+      cell.model = shotModel
+      return cell
     }
     
-    return cell
   }
   
 }

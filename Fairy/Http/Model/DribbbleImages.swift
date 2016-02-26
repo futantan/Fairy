@@ -20,6 +20,11 @@ struct DribbbleImages: ResponseObjectSerializable {
     self.teaser = representation.valueForKeyPath("teaser") as! String
   }
   
+  func maxURL() -> NSURL {
+    let result = hidpi ?? normal
+    return NSURL(string: result)!
+  }
+  
   func imageURL(animated: Bool) -> NSURL {
 //    if (animated) {
 //      let result = hidpi ?? normal

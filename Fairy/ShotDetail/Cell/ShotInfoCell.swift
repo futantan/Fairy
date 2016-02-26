@@ -12,7 +12,16 @@ class ShotInfoCell: UITableViewCell {
   
   @IBOutlet weak var faviConImageView: UIImageView!
   @IBOutlet weak var favNumLabel: UILabel!
-  @IBOutlet weak var commentNum: UILabel!
+  @IBOutlet weak var commentNumLabel: UILabel!
+  
+  var model: DribbbleShotModel? {
+    didSet {
+      guard let model = model else { return }
+      
+      favNumLabel.text = "\(model.likes_count)"
+      commentNumLabel.text = "\(model.comments_count)"
+    }
+  }
   
   override func awakeFromNib() {
     super.awakeFromNib()

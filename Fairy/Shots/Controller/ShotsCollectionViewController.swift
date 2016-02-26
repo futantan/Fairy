@@ -34,6 +34,14 @@ class ShotsCollectionViewController: UICollectionViewController {
     // Dispose of any resources that can be recreated.
   }
   
+  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    if segue.identifier == "showDetailShot" {
+      let detailShotVC = segue.destinationViewController as! ShotDetailController
+      let indexPath = sender as! NSIndexPath
+      detailShotVC.shotModel = shotsArray[indexPath.row]
+    }
+  }
+  
 }
 
 // MARK: - Target-Action
@@ -76,7 +84,7 @@ extension ShotsCollectionViewController {
   }
   
   override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-    performSegueWithIdentifier("showDetailShot", sender: nil)
+    performSegueWithIdentifier("showDetailShot", sender: indexPath)
   }
 }
 

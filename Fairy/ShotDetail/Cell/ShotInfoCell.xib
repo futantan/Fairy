@@ -50,33 +50,6 @@
                             <action selector="likeContainerPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="I1J-yJ-Qfr"/>
                         </connections>
                     </view>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dsc-XI-67t" userLabel="bucket container" customClass="UIControl">
-                        <rect key="frame" x="214" y="0.0" width="106" height="43"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bucket_icon" translatesAutoresizingMaskIntoConstraints="NO" id="oLX-hN-Cfh">
-                                <rect key="frame" x="42" y="11" width="22" height="22"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="22" id="6IG-NY-PmW"/>
-                                    <constraint firstAttribute="height" constant="22" id="8Pu-hO-VCd"/>
-                                </constraints>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="oLX-hN-Cfh" firstAttribute="centerX" secondItem="dsc-XI-67t" secondAttribute="centerX" id="J4g-6B-A7y"/>
-                            <constraint firstItem="oLX-hN-Cfh" firstAttribute="centerY" secondItem="dsc-XI-67t" secondAttribute="centerY" id="jAb-se-Uhm"/>
-                        </constraints>
-                        <connections>
-                            <action selector="bucketContainerPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="hhs-8e-Xvm"/>
-                        </connections>
-                    </view>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="08B-uU-GbW" userLabel="separator">
-                        <rect key="frame" x="0.0" y="43" width="320" height="1"/>
-                        <color key="backgroundColor" red="0.83529411760000005" green="0.83529411760000005" blue="0.83529411760000005" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="1" id="rbO-Pe-eRy"/>
-                        </constraints>
-                    </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dOz-6s-gut" userLabel="comment number container" customClass="UIControl">
                         <rect key="frame" x="107" y="0.0" width="107" height="44"/>
                         <subviews>
@@ -114,6 +87,33 @@
                             <action selector="commentContainerPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Mws-x8-MX5"/>
                         </connections>
                     </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dsc-XI-67t" userLabel="bucket container" customClass="UIControl">
+                        <rect key="frame" x="214" y="0.0" width="106" height="43"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bucket_icon" translatesAutoresizingMaskIntoConstraints="NO" id="oLX-hN-Cfh">
+                                <rect key="frame" x="42" y="11" width="22" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="22" id="6IG-NY-PmW"/>
+                                    <constraint firstAttribute="height" constant="22" id="8Pu-hO-VCd"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="oLX-hN-Cfh" firstAttribute="centerX" secondItem="dsc-XI-67t" secondAttribute="centerX" id="J4g-6B-A7y"/>
+                            <constraint firstItem="oLX-hN-Cfh" firstAttribute="centerY" secondItem="dsc-XI-67t" secondAttribute="centerY" id="jAb-se-Uhm"/>
+                        </constraints>
+                        <connections>
+                            <action selector="bucketContainerPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="hhs-8e-Xvm"/>
+                        </connections>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="08B-uU-GbW" userLabel="separator">
+                        <rect key="frame" x="0.0" y="43" width="320" height="1"/>
+                        <color key="backgroundColor" red="0.83529411760000005" green="0.83529411760000005" blue="0.83529411760000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="rbO-Pe-eRy"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstItem="tak-Cw-aIg" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="1/3" id="6lk-6G-bSG"/>
@@ -136,8 +136,8 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="commentNum" destination="NrW-Jw-Tod" id="UwS-dW-MPv"/>
-                <outlet property="favNumLabel" destination="AVf-5c-Z6K" id="qtN-Qr-sEC"/>
+                <outlet property="commentNumLabel" destination="NrW-Jw-Tod" id="DQA-K1-cDM"/>
+                <outlet property="favNumLabel" destination="AVf-5c-Z6K" id="Egv-cO-SqW"/>
                 <outlet property="faviConImageView" destination="Ed0-aP-Y3n" id="uRI-M9-Wez"/>
             </connections>
             <point key="canvasLocation" x="-404" y="193"/>

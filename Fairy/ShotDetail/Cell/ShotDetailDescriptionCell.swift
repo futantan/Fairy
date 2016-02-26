@@ -12,6 +12,14 @@ class ShotDetailDescriptionCell: UITableViewCell {
   
   @IBOutlet weak var descriptionLabel: UILabel!
   
+  var model: DribbbleShotModel? {
+    didSet {
+      guard let model = model else { return }
+      
+      descriptionLabel.text = model.description
+    }
+  }
+  
   override func awakeFromNib() {
     super.awakeFromNib()
     // Initialization code

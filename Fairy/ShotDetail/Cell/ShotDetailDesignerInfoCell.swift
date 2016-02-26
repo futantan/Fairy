@@ -15,6 +15,17 @@ class ShotDetailDesignerInfoCell: UITableViewCell {
   @IBOutlet weak var userNameLabel: UILabel!
   @IBOutlet weak var dateLabel: UILabel!
   
+  var model: DribbbleShotModel? {
+    didSet {
+      guard let model = model else { return }
+      
+      userAvatarImageView.kf_setImageWithURL(NSURL(string: model.user.avatar_url)!, placeholderImage: nil)
+      titleLabel.text = model.title
+      userNameLabel.text = "by \(model.user.username)"
+      dateLabel.text = model.updated_at
+    }
+  }
+  
   override func awakeFromNib() {
     super.awakeFromNib()
     
