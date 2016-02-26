@@ -29,13 +29,14 @@
 		188C2E021C80491E00C18B9A /* ShotDetailDescriptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 188C2E001C80491E00C18B9A /* ShotDetailDescriptionCell.xib */; };
 		18928D101C64B57D003B2DFB /* Http.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18928D0F1C64B57D003B2DFB /* Http.swift */; };
 		18928D151C64E01B003B2DFB /* ShotsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18928D141C64E01B003B2DFB /* ShotsCollectionViewController.swift */; };
-		18928D171C64E030003B2DFB /* DribbbleShotsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18928D161C64E030003B2DFB /* DribbbleShotsModel.swift */; };
-		18928D191C64E702003B2DFB /* DribbbleUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18928D181C64E702003B2DFB /* DribbbleUserModel.swift */; };
 		18BF9C091C622B6B007E9194 /* APIShots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BF9C081C622B6B007E9194 /* APIShots.swift */; };
 		18BF9C0B1C622CF6007E9194 /* Alamofire+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BF9C0A1C622CF6007E9194 /* Alamofire+Extension.swift */; };
-		18F166821C661A2C00E9185B /* DribbbleTeamModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F166811C661A2C00E9185B /* DribbbleTeamModel.swift */; };
-		18F166841C661E0C00E9185B /* DribbbleImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F166831C661E0C00E9185B /* DribbbleImages.swift */; };
-		18F166861C661E6500E9185B /* DribbbleLinks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F166851C661E6500E9185B /* DribbbleLinks.swift */; };
+		18CB61DC1C8086460038A5A6 /* ShotDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CB61DB1C8086460038A5A6 /* ShotDetailModel.swift */; };
+		18CB61E31C8089AB0038A5A6 /* DribbbleImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CB61DE1C8089AB0038A5A6 /* DribbbleImages.swift */; };
+		18CB61E41C8089AB0038A5A6 /* DribbbleLinks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CB61DF1C8089AB0038A5A6 /* DribbbleLinks.swift */; };
+		18CB61E51C8089AB0038A5A6 /* DribbbleShotModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CB61E01C8089AB0038A5A6 /* DribbbleShotModel.swift */; };
+		18CB61E61C8089AB0038A5A6 /* DribbbleTeamModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CB61E11C8089AB0038A5A6 /* DribbbleTeamModel.swift */; };
+		18CB61E71C8089AB0038A5A6 /* DribbbleUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CB61E21C8089AB0038A5A6 /* DribbbleUserModel.swift */; };
 		18F166881C662F5E00E9185B /* ShotsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F166871C662F5E00E9185B /* ShotsCollectionViewCell.swift */; };
 		18F1668B1C699C9B00E9185B /* ShotsFooterCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F1668A1C699C9B00E9185B /* ShotsFooterCollectionReusableView.swift */; };
 		2B3D4F16F572CBAB786F21AB /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 510D133E9F323AFB1A278C5B /* CoreTelephony.framework */; };
@@ -73,13 +74,14 @@
 		188C2E001C80491E00C18B9A /* ShotDetailDescriptionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShotDetailDescriptionCell.xib; sourceTree = "<group>"; };
 		18928D0F1C64B57D003B2DFB /* Http.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Http.swift; sourceTree = "<group>"; };
 		18928D141C64E01B003B2DFB /* ShotsCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShotsCollectionViewController.swift; sourceTree = "<group>"; };
-		18928D161C64E030003B2DFB /* DribbbleShotsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DribbbleShotsModel.swift; sourceTree = "<group>"; };
-		18928D181C64E702003B2DFB /* DribbbleUserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DribbbleUserModel.swift; sourceTree = "<group>"; };
 		18BF9C081C622B6B007E9194 /* APIShots.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIShots.swift; sourceTree = "<group>"; };
 		18BF9C0A1C622CF6007E9194 /* Alamofire+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Alamofire+Extension.swift"; sourceTree = "<group>"; };
-		18F166811C661A2C00E9185B /* DribbbleTeamModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DribbbleTeamModel.swift; sourceTree = "<group>"; };
-		18F166831C661E0C00E9185B /* DribbbleImages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DribbbleImages.swift; sourceTree = "<group>"; };
-		18F166851C661E6500E9185B /* DribbbleLinks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DribbbleLinks.swift; sourceTree = "<group>"; };
+		18CB61DB1C8086460038A5A6 /* ShotDetailModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShotDetailModel.swift; sourceTree = "<group>"; };
+		18CB61DE1C8089AB0038A5A6 /* DribbbleImages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DribbbleImages.swift; sourceTree = "<group>"; };
+		18CB61DF1C8089AB0038A5A6 /* DribbbleLinks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DribbbleLinks.swift; sourceTree = "<group>"; };
+		18CB61E01C8089AB0038A5A6 /* DribbbleShotModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DribbbleShotModel.swift; sourceTree = "<group>"; };
+		18CB61E11C8089AB0038A5A6 /* DribbbleTeamModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DribbbleTeamModel.swift; sourceTree = "<group>"; };
+		18CB61E21C8089AB0038A5A6 /* DribbbleUserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DribbbleUserModel.swift; sourceTree = "<group>"; };
 		18F166871C662F5E00E9185B /* ShotsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShotsCollectionViewCell.swift; sourceTree = "<group>"; };
 		18F1668A1C699C9B00E9185B /* ShotsFooterCollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShotsFooterCollectionReusableView.swift; sourceTree = "<group>"; };
 		428847087D20C80599EE8867 /* Pods_Fairy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fairy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -151,6 +153,7 @@
 		1844E9111C5F18DC00705FE3 /* Http */ = {
 			isa = PBXGroup;
 			children = (
+				18CB61DD1C8089AB0038A5A6 /* Model */,
 				1844E9121C5F19F000705FE3 /* OAuth.swift */,
 				18BF9C081C622B6B007E9194 /* APIShots.swift */,
 				18BF9C0A1C622CF6007E9194 /* Alamofire+Extension.swift */,
@@ -182,6 +185,7 @@
 				188C2DEE1C7F314F00C18B9A /* Cell */,
 				188C2DE21C7F1F4F00C18B9A /* ShotDetailController.swift */,
 				188C2DEC1C7F312500C18B9A /* ShotDetail.storyboard */,
+				18CB61DB1C8086460038A5A6 /* ShotDetailModel.swift */,
 			);
 			path = ShotDetail;
 			sourceTree = "<group>";
@@ -206,21 +210,8 @@
 			children = (
 				18928D121C64DFFA003B2DFB /* Controller */,
 				18928D131C64DFFA003B2DFB /* View */,
-				18928D111C64DFE3003B2DFB /* Model */,
 			);
 			path = Shots;
-			sourceTree = "<group>";
-		};
-		18928D111C64DFE3003B2DFB /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				18928D161C64E030003B2DFB /* DribbbleShotsModel.swift */,
-				18928D181C64E702003B2DFB /* DribbbleUserModel.swift */,
-				18F166811C661A2C00E9185B /* DribbbleTeamModel.swift */,
-				18F166831C661E0C00E9185B /* DribbbleImages.swift */,
-				18F166851C661E6500E9185B /* DribbbleLinks.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		18928D121C64DFFA003B2DFB /* Controller */ = {
@@ -239,6 +230,18 @@
 				18F1668A1C699C9B00E9185B /* ShotsFooterCollectionReusableView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		18CB61DD1C8089AB0038A5A6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				18CB61DE1C8089AB0038A5A6 /* DribbbleImages.swift */,
+				18CB61DF1C8089AB0038A5A6 /* DribbbleLinks.swift */,
+				18CB61E01C8089AB0038A5A6 /* DribbbleShotModel.swift */,
+				18CB61E11C8089AB0038A5A6 /* DribbbleTeamModel.swift */,
+				18CB61E21C8089AB0038A5A6 /* DribbbleUserModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		B2BACBF748381AA6559FE8E4 /* Pods */ = {
@@ -394,26 +397,27 @@
 			files = (
 				18F166881C662F5E00E9185B /* ShotsCollectionViewCell.swift in Sources */,
 				188C2DF91C7FF4C500C18B9A /* ShotInfoCell.swift in Sources */,
+				18CB61DC1C8086460038A5A6 /* ShotDetailModel.swift in Sources */,
+				18CB61E41C8089AB0038A5A6 /* DribbbleLinks.swift in Sources */,
 				1844E9161C5F7B0F00705FE3 /* NSURL+Extension.swift in Sources */,
 				18889D031C74A9FC00CC6CBA /* ShotsCollectionCellViewModel.swift in Sources */,
 				188C2DF11C7F314F00C18B9A /* ShotDetailHeaderImageCell.swift in Sources */,
+				18CB61E51C8089AB0038A5A6 /* DribbbleShotModel.swift in Sources */,
+				18CB61E71C8089AB0038A5A6 /* DribbbleUserModel.swift in Sources */,
 				18BF9C091C622B6B007E9194 /* APIShots.swift in Sources */,
+				18CB61E31C8089AB0038A5A6 /* DribbbleImages.swift in Sources */,
 				18928D151C64E01B003B2DFB /* ShotsCollectionViewController.swift in Sources */,
-				18F166841C661E0C00E9185B /* DribbbleImages.swift in Sources */,
 				1844E9131C5F19F000705FE3 /* OAuth.swift in Sources */,
 				1844E9191C5F887F00705FE3 /* Defaults.swift in Sources */,
 				18F1668B1C699C9B00E9185B /* ShotsFooterCollectionReusableView.swift in Sources */,
-				18F166821C661A2C00E9185B /* DribbbleTeamModel.swift in Sources */,
 				188C2DF51C7FE97200C18B9A /* ShotDetailDesignerInfoCell.swift in Sources */,
 				188C2DE31C7F1F4F00C18B9A /* ShotDetailController.swift in Sources */,
-				18928D171C64E030003B2DFB /* DribbbleShotsModel.swift in Sources */,
 				188C2E011C80491E00C18B9A /* ShotDetailDescriptionCell.swift in Sources */,
+				18CB61E61C8089AB0038A5A6 /* DribbbleTeamModel.swift in Sources */,
 				18BF9C0B1C622CF6007E9194 /* Alamofire+Extension.swift in Sources */,
-				18F166861C661E6500E9185B /* DribbbleLinks.swift in Sources */,
 				1844E9021C5F18B200705FE3 /* ViewController.swift in Sources */,
 				1844E91B1C5F8DB300705FE3 /* FairyNotification.swift in Sources */,
 				1844E9001C5F18B200705FE3 /* AppDelegate.swift in Sources */,
-				18928D191C64E702003B2DFB /* DribbbleUserModel.swift in Sources */,
 				18928D101C64B57D003B2DFB /* Http.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

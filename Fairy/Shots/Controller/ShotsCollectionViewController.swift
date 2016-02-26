@@ -16,7 +16,7 @@ private let CellItemsMargin: CGFloat = 16.0
 
 class ShotsCollectionViewController: UICollectionViewController {
   // data source
-  var shotsArray: [DribbbleShotsModel] = []
+  var shotsArray: [DribbbleShotModel] = []
   var populatingCells = false // 是否正在加载
   var currentPage = 0
   
@@ -130,7 +130,7 @@ extension ShotsCollectionViewController {
     currentPage++
     
     
-    Alamofire.request(APIShots.Router.ListShots(page: currentPage, list: .Default, timeframe: .Default, date: "", sort: .Default)).responseCollection { (response: Response<[DribbbleShotsModel], NSError>) in
+    Alamofire.request(APIShots.Router.ListShots(page: currentPage, list: .Default, timeframe: .Default, date: "", sort: .Default)).responseCollection { (response: Response<[DribbbleShotModel], NSError>) in
       func failed() { self.populatingCells = false }
       guard let shotsModels = response.result.value else { failed(); return }
       if response .result.error != nil { failed(); return }

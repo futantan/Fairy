@@ -12,7 +12,7 @@ import Foundation
 struct ShotsCollectionCellViewModel {
   let imageURL: NSURL
   
-  init(dribbbleShotsModel: DribbbleShotsModel) {
+  init(dribbbleShotsModel: DribbbleShotModel) {
     self.imageURL = dribbbleShotsModel.images.imageURL(dribbbleShotsModel.animated)
   }
 }

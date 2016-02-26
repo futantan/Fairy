@@ -1,5 +1,5 @@
 //
-//  DribbbleShotsModel.swift
+//  DribbbleShotModel.swift
 //  Fairy
 //
 //  Created by luckytantanfu on 2/5/16.
@@ -9,7 +9,7 @@
 import Foundation
 
 
-struct DribbbleShotsModel: ResponseObjectSerializable, ResponseCollectionSerializable {
+struct DribbbleShotModel: ResponseObjectSerializable, ResponseCollectionSerializable {
   let id: Int
   let title: String
   let description: String?
@@ -71,12 +71,12 @@ struct DribbbleShotsModel: ResponseObjectSerializable, ResponseCollectionSeriali
     }
   }
   
-  static func collection(response response: NSHTTPURLResponse, representation: AnyObject) -> [DribbbleShotsModel] {
-    var shotModels: [DribbbleShotsModel] = []
+  static func collection(response response: NSHTTPURLResponse, representation: AnyObject) -> [DribbbleShotModel] {
+    var shotModels: [DribbbleShotModel] = []
     
     if let representation = representation as? [[String: AnyObject]] {
       for shotRepresentation in representation {
-        if let shotModel = DribbbleShotsModel(response: response, representation: shotRepresentation) {
+        if let shotModel = DribbbleShotModel(response: response, representation: shotRepresentation) {
           shotModels.append(shotModel)
         }
       }
