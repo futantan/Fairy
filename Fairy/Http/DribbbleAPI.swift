@@ -1,5 +1,5 @@
 //
-//  APIShots.swift
+//  DribbbleAPI.swift
 //  Fairy
 //
 //  Created by luckytantanfu on 2/3/16.
@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 
 
-struct APIShots {
+struct DribbbleAPI {
   enum Router: URLRequestConvertible {
     static let basrURLString = "https://api.dribbble.com/v1"
     static let token = "f12356ed02da3b0734617cad02791f6af03c9b4f486e2c107a7a4c6c28c70b9b"
@@ -30,9 +30,11 @@ struct APIShots {
 //    /// Delete a shot DELETE
 //    case DeleteShot
     
+    case ListCommentsOfShot(id: Int)
+    
     var method: Alamofire.Method {
       switch self {
-      case .ListShots:
+      case .ListShots, .ListCommentsOfShot(_):
         return .GET
       }
     }
@@ -42,6 +44,9 @@ struct APIShots {
         switch self {
         case .ListShots(let page, let list, let timeframe, let date, let sort):
           return ("/shots", ["page": page, "list": list.rawValue, "timeframe": timeframe.rawValue, "date": date, "sort": sort.rawValue])
+          
+        case .ListCommentsOfShot(let id):
+          return ("/shots/\(id)/comments", ["": ""])
         }
       }()
       
@@ -58,7 +63,7 @@ struct APIShots {
 }
 
 // MARK: - APIShots List shots parameters type
-extension APIShots.Router {
+extension DribbbleAPI.Router {
   /**
    Limit the results to a specific type with the following possible values
    

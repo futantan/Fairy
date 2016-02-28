@@ -138,7 +138,7 @@ extension ShotsCollectionViewController {
     currentPage++
     
     
-    Alamofire.request(APIShots.Router.ListShots(page: currentPage, list: .Default, timeframe: .Default, date: "", sort: .Default)).responseCollection { (response: Response<[DribbbleShotModel], NSError>) in
+    Alamofire.request(DribbbleAPI.Router.ListShots(page: currentPage, list: .Default, timeframe: .Default, date: "", sort: .Default)).responseCollection { (response: Response<[DribbbleShotModel], NSError>) in
       func failed() { self.populatingCells = false }
       guard let shotsModels = response.result.value else { failed(); return }
       if response .result.error != nil { failed(); return }

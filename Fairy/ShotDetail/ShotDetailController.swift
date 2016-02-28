@@ -112,21 +112,20 @@ extension ShotDetailController {
   }
   
   private func loadComments() {
-    Alamofire.request(APIShots.Router.ListShots(page: currentPage, list: .Default, timeframe: .Default, date: "", sort: .Default)).responseCollection { (response: Response<[DribbbleShotModel], NSError>) in
-      func failed() { self.populatingCells = false }
-      guard let shotsModels = response.result.value else { failed(); return }
-      if response .result.error != nil { failed(); return }
-      
-      let lastItem = self.shotsArray.count
-      self.shotsArray.appendContentsOf(shotsModels)
-      let indexPaths = (lastItem..<self.shotsArray.count).map { NSIndexPath(forItem: $0, inSection: 0) }
-      
-      dispatch_async(dispatch_get_main_queue()) {
-        self.collectionView!.insertItemsAtIndexPaths(indexPaths)
-      }
-      self.currentPage++
-      self.populatingCells = false
-    }
-    
+//    Alamofire.request(DribbbleAPI.Router.ListShots(page: currentPage, list: .Default, timeframe: .Default, date: "", sort: .Default)).responseCollection { (response: Response<[DribbbleShotModel], NSError>) in
+//      func failed() { self.populatingCells = false }
+//      guard let shotsModels = response.result.value else { failed(); return }
+//      if response .result.error != nil { failed(); return }
+//      
+//      let lastItem = self.shotsArray.count
+//      self.shotsArray.appendContentsOf(shotsModels)
+//      let indexPaths = (lastItem..<self.shotsArray.count).map { NSIndexPath(forItem: $0, inSection: 0) }
+//      
+//      dispatch_async(dispatch_get_main_queue()) {
+//        self.collectionView!.insertItemsAtIndexPaths(indexPaths)
+//      }
+//      self.currentPage++
+//      self.populatingCells = false
+//    }
   }
 }
