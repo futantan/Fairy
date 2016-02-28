@@ -20,6 +20,7 @@ class ShotsCollectionViewCell: UICollectionViewCell {
       guard let model = shotsCollectionCellModel else { return }
       
       shotsImageView.kf_setImageWithURL(model.imageURL, placeholderImage: nil, optionsInfo: [.Transition(ImageTransition.FlipFromTop(0.5))], progressBlock: nil) { (image, error, cacheType, imageURL) -> () in
+        guard let error = error else { return }
         print(error)
       }
     }

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ShotDetailCommentCell" rowHeight="74" id="gOL-t9-XU1" customClass="ShotDetailCommentCell" customModule="Fairy" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="345" height="74"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gOL-t9-XU1" id="xC7-2v-Us1">
+                <rect key="frame" x="0.0" y="0.0" width="345" height="74"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sUc-ku-64a" userLabel="separator">
+                        <rect key="frame" x="0.0" y="66" width="0.0" height="0.0"/>
+                        <color key="backgroundColor" red="0.83529411760000005" green="0.83529411760000005" blue="0.83529411760000005" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mystery" translatesAutoresizingMaskIntoConstraints="NO" id="FZU-fC-nAO">
+                        <rect key="frame" x="14" y="8" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="CQP-gm-Wk4"/>
+                            <constraint firstAttribute="width" constant="50" id="Mq0-86-iP3"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nick" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EUT-cK-Bbv">
+                        <rect key="frame" x="72" y="8" width="265" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="balalala" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fwd-gA-pkE">
+                        <rect key="frame" x="72" y="41" width="257" height="17"/>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="FZU-fC-nAO" firstAttribute="leading" secondItem="xC7-2v-Us1" secondAttribute="leading" constant="14" id="3Hy-J9-aZ7"/>
+                    <constraint firstItem="FZU-fC-nAO" firstAttribute="top" secondItem="xC7-2v-Us1" secondAttribute="top" constant="8" id="8UO-lQ-NJB"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="fwd-gA-pkE" secondAttribute="trailing" constant="8" id="NPZ-ON-WFJ"/>
+                    <constraint firstItem="EUT-cK-Bbv" firstAttribute="top" secondItem="xC7-2v-Us1" secondAttribute="top" constant="8" id="RVs-PC-eh5"/>
+                    <constraint firstItem="EUT-cK-Bbv" firstAttribute="leading" secondItem="FZU-fC-nAO" secondAttribute="trailing" constant="8" id="Thm-kV-qIh"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="FZU-fC-nAO" secondAttribute="bottom" constant="8" id="WVm-B7-2XO"/>
+                    <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="fwd-gA-pkE" secondAttribute="bottom" constant="8" id="XW8-l6-nel"/>
+                    <constraint firstItem="fwd-gA-pkE" firstAttribute="top" secondItem="EUT-cK-Bbv" secondAttribute="bottom" constant="12" id="Ym7-cM-8ib"/>
+                    <constraint firstAttribute="trailing" secondItem="EUT-cK-Bbv" secondAttribute="trailing" constant="8" id="pPZ-hE-xqt"/>
+                    <constraint firstItem="fwd-gA-pkE" firstAttribute="leading" secondItem="EUT-cK-Bbv" secondAttribute="leading" id="uN9-oi-HXI"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="avatarImageView" destination="FZU-fC-nAO" id="NAl-7n-df8"/>
+                <outlet property="commentLabel" destination="fwd-gA-pkE" id="xlw-5B-a4i"/>
+                <outlet property="userNameLabel" destination="EUT-cK-Bbv" id="dz8-o4-ABo"/>
+            </connections>
+            <point key="canvasLocation" x="-670.5" y="50"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="mystery" width="800" height="600"/>
+    </resources>
+</document>

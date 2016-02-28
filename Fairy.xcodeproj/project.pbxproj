@@ -39,6 +39,9 @@
 		18CB61E71C8089AB0038A5A6 /* DribbbleUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CB61E21C8089AB0038A5A6 /* DribbbleUserModel.swift */; };
 		18F166881C662F5E00E9185B /* ShotsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F166871C662F5E00E9185B /* ShotsCollectionViewCell.swift */; };
 		18F1668B1C699C9B00E9185B /* ShotsFooterCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F1668A1C699C9B00E9185B /* ShotsFooterCollectionReusableView.swift */; };
+		18F9D4DD1C8326720091B891 /* ShotDetailCommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F9D4DB1C8326720091B891 /* ShotDetailCommentCell.swift */; };
+		18F9D4DE1C8326720091B891 /* ShotDetailCommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18F9D4DC1C8326720091B891 /* ShotDetailCommentCell.xib */; };
+		18F9D4E01C832A2E0091B891 /* DribbbleCommentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F9D4DF1C832A2E0091B891 /* DribbbleCommentModel.swift */; };
 		2B3D4F16F572CBAB786F21AB /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 510D133E9F323AFB1A278C5B /* CoreTelephony.framework */; };
 		42DD311CB9B6D5647174012E /* BuddyBuildSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D301976B532B62C68D58AB67 /* BuddyBuildSDK.framework */; };
 		656DE2063BEFEB11A8E33E8F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A07CDD4FECBA84DAF90DC5C /* QuartzCore.framework */; };
@@ -84,6 +87,9 @@
 		18CB61E21C8089AB0038A5A6 /* DribbbleUserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DribbbleUserModel.swift; sourceTree = "<group>"; };
 		18F166871C662F5E00E9185B /* ShotsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShotsCollectionViewCell.swift; sourceTree = "<group>"; };
 		18F1668A1C699C9B00E9185B /* ShotsFooterCollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShotsFooterCollectionReusableView.swift; sourceTree = "<group>"; };
+		18F9D4DB1C8326720091B891 /* ShotDetailCommentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShotDetailCommentCell.swift; sourceTree = "<group>"; };
+		18F9D4DC1C8326720091B891 /* ShotDetailCommentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShotDetailCommentCell.xib; sourceTree = "<group>"; };
+		18F9D4DF1C832A2E0091B891 /* DribbbleCommentModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DribbbleCommentModel.swift; sourceTree = "<group>"; };
 		428847087D20C80599EE8867 /* Pods_Fairy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fairy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		510D133E9F323AFB1A278C5B /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		87EA3F819AD18B1172A61BF1 /* Pods-Fairy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fairy.release.xcconfig"; path = "Pods/Target Support Files/Pods-Fairy/Pods-Fairy.release.xcconfig"; sourceTree = "<group>"; };
@@ -201,6 +207,8 @@
 				188C2DF81C7FF4C500C18B9A /* ShotInfoCell.xib */,
 				188C2DFF1C80491E00C18B9A /* ShotDetailDescriptionCell.swift */,
 				188C2E001C80491E00C18B9A /* ShotDetailDescriptionCell.xib */,
+				18F9D4DB1C8326720091B891 /* ShotDetailCommentCell.swift */,
+				18F9D4DC1C8326720091B891 /* ShotDetailCommentCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -240,6 +248,7 @@
 				18CB61E01C8089AB0038A5A6 /* DribbbleShotModel.swift */,
 				18CB61E11C8089AB0038A5A6 /* DribbbleTeamModel.swift */,
 				18CB61E21C8089AB0038A5A6 /* DribbbleUserModel.swift */,
+				18F9D4DF1C832A2E0091B891 /* DribbbleCommentModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -337,6 +346,7 @@
 				188C2DFA1C7FF4C500C18B9A /* ShotInfoCell.xib in Resources */,
 				1844E9071C5F18B200705FE3 /* Assets.xcassets in Resources */,
 				1844E9051C5F18B200705FE3 /* Main.storyboard in Resources */,
+				18F9D4DE1C8326720091B891 /* ShotDetailCommentCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,6 +410,7 @@
 				18CB61DC1C8086460038A5A6 /* ShotDetailModel.swift in Sources */,
 				18CB61E41C8089AB0038A5A6 /* DribbbleLinks.swift in Sources */,
 				1844E9161C5F7B0F00705FE3 /* NSURL+Extension.swift in Sources */,
+				18F9D4E01C832A2E0091B891 /* DribbbleCommentModel.swift in Sources */,
 				18889D031C74A9FC00CC6CBA /* ShotsCollectionCellViewModel.swift in Sources */,
 				188C2DF11C7F314F00C18B9A /* ShotDetailHeaderImageCell.swift in Sources */,
 				18CB61E51C8089AB0038A5A6 /* DribbbleShotModel.swift in Sources */,
@@ -419,6 +430,7 @@
 				1844E91B1C5F8DB300705FE3 /* FairyNotification.swift in Sources */,
 				1844E9001C5F18B200705FE3 /* AppDelegate.swift in Sources */,
 				18928D101C64B57D003B2DFB /* Http.swift in Sources */,
+				18F9D4DD1C8326720091B891 /* ShotDetailCommentCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
