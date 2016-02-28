@@ -21,6 +21,7 @@ class ShotDetailController: UITableViewController {
     
     setupViews()
     registerCells()
+    loadComments()
   }
   
   override func didReceiveMemoryWarning() {
@@ -109,23 +110,19 @@ extension ShotDetailController {
     tableView.registerNib(UINib(nibName: String(ShotDetailHeaderImageCell), bundle: nil), forCellReuseIdentifier: String(ShotDetailHeaderImageCell))
     tableView.registerNib(UINib(nibName: String(ShotInfoCell), bundle: nil), forCellReuseIdentifier: String(ShotInfoCell))
     tableView.registerNib(UINib(nibName: String(ShotDetailDescriptionCell), bundle: nil), forCellReuseIdentifier: String(ShotDetailDescriptionCell))
+    tableView.registerNib(UINib(nibName: String(ShotDetailCommentCell), bundle: nil), forCellReuseIdentifier: String(ShotDetailCommentCell))
   }
   
   private func loadComments() {
-//    Alamofire.request(DribbbleAPI.Router.ListShots(page: currentPage, list: .Default, timeframe: .Default, date: "", sort: .Default)).responseCollection { (response: Response<[DribbbleShotModel], NSError>) in
-//      func failed() { self.populatingCells = false }
-//      guard let shotsModels = response.result.value else { failed(); return }
-//      if response .result.error != nil { failed(); return }
-//      
-//      let lastItem = self.shotsArray.count
-//      self.shotsArray.appendContentsOf(shotsModels)
-//      let indexPaths = (lastItem..<self.shotsArray.count).map { NSIndexPath(forItem: $0, inSection: 0) }
-//      
-//      dispatch_async(dispatch_get_main_queue()) {
-//        self.collectionView!.insertItemsAtIndexPaths(indexPaths)
-//      }
-//      self.currentPage++
-//      self.populatingCells = false
-//    }
+    Alamofire.request(DribbbleAPI.Router.ListCommentsOfShot(id: shotModel!.id)).responseCollection { (response: Response<[DribbbleCommentModel], NSError>) in
+      func failed() { print(response.result.error) }
+      
+      guard let commentsModels = response.result.value else { failed(); return }
+      self.commentsArray = commentsModels
+      
+      dispatch_async(dispatch_get_main_queue()) {
+        self.tableView.reloadSections(NSIndexSet(index: ShotDetailSection.Comments.rawValue), withRowAnimation: .Fade)
+      }
+    }
   }
 }
