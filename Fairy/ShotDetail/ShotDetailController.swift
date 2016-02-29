@@ -11,7 +11,7 @@ import Alamofire
 
 class ShotDetailController: UITableViewController {
   
-  var shotModel: DribbbleShotModel?
+  var shotModel: DribbbleShotModel!
   var commentsArray = [DribbbleCommentModel]()
   
   @IBOutlet weak var shotImageView: UIImageView!
