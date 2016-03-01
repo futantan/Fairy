@@ -31,8 +31,7 @@ class ShotsCollectionViewController: UICollectionViewController {
     super.viewDidLoad()
     
     setupView()
-    refreshView.beginRefreshing()
-    refreshCells()
+    populateCells()
     setup3DTouch()
   }
   
