@@ -172,15 +172,13 @@ extension ShotsCollectionViewController {
   
   private func refreshCells() {
     netRequest?.cancel()
-    shotsArray.removeAll()
-    collectionView?.reloadData()
     currentPage = 0
-    populateCells {
+    populateCells(shouldClearData: true) {
       self.refreshView.endRefreshing()
     }
   }
   
-  private func populateCells(completed: (Void -> Void)? = nil) {
+  private func populateCells(shouldClearData shouldClearData: Bool = false, completed: (Void -> Void)? = nil) {
     // 防止还在加载当前界面时加载下一个页面
     guard !populatingCells else { return }
     
@@ -192,13 +190,22 @@ extension ShotsCollectionViewController {
       guard let shotsModels = response.result.value else { failed(); return }
       if response .result.error != nil { failed(); return }
       
+      if shouldClearData {
+        self.shotsArray.removeAll()
+      }
+      
       let lastItem = self.shotsArray.count
       self.shotsArray.appendContentsOf(shotsModels)
       let indexPaths = (lastItem..<self.shotsArray.count).map { NSIndexPath(forItem: $0, inSection: 0) }
       
       dispatch_async(dispatch_get_main_queue()) {
-        self.collectionView!.insertItemsAtIndexPaths(indexPaths)
-        // TODO: - bug
+        
+        if shouldClearData {
+          self.collectionView?.reloadData()
+        } else {
+          self.collectionView?.insertItemsAtIndexPaths(indexPaths)
+        }
+
         completed?()
       }
       self.currentPage++
