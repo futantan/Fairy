@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1844E9021C5F18B200705FE3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1844E9011C5F18B200705FE3 /* ViewController.swift */; };
 		1844E9131C5F19F000705FE3 /* OAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1844E9121C5F19F000705FE3 /* OAuth.swift */; };
 		1844E9161C5F7B0F00705FE3 /* NSURL+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1844E9151C5F7B0F00705FE3 /* NSURL+Extension.swift */; };
 		1844E9191C5F887F00705FE3 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1844E9181C5F887F00705FE3 /* Defaults.swift */; };
@@ -17,6 +16,7 @@
 		185448F81C85347100AB787A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 185448F11C85347100AB787A /* LaunchScreen.storyboard */; };
 		185448F91C85347100AB787A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 185448F31C85347100AB787A /* Main.storyboard */; };
 		185448FA1C85347100AB787A /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 185448F51C85347100AB787A /* Info.plist */; };
+		185448FF1C853EAD00AB787A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185448FE1C853EAD00AB787A /* ViewController.swift */; };
 		18889D031C74A9FC00CC6CBA /* ShotsCollectionCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18889D021C74A9FC00CC6CBA /* ShotsCollectionCellViewModel.swift */; };
 		188C2DE31C7F1F4F00C18B9A /* ShotDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188C2DE21C7F1F4F00C18B9A /* ShotDetailController.swift */; };
 		188C2DED1C7F312500C18B9A /* ShotDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 188C2DEC1C7F312500C18B9A /* ShotDetail.storyboard */; };
@@ -55,7 +55,6 @@
 /* Begin PBXFileReference section */
 		0688B319E97778CEFCD7ECD9 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		1844E8FC1C5F18B200705FE3 /* Fairy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fairy.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		1844E9011C5F18B200705FE3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1844E9121C5F19F000705FE3 /* OAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuth.swift; sourceTree = "<group>"; };
 		1844E9151C5F7B0F00705FE3 /* NSURL+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSURL+Extension.swift"; sourceTree = "<group>"; };
 		1844E9181C5F887F00705FE3 /* Defaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
@@ -65,6 +64,7 @@
 		185448F21C85347100AB787A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		185448F41C85347100AB787A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		185448F51C85347100AB787A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		185448FE1C853EAD00AB787A /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		18889D021C74A9FC00CC6CBA /* ShotsCollectionCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShotsCollectionCellViewModel.swift; sourceTree = "<group>"; };
 		188C2DE21C7F1F4F00C18B9A /* ShotDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShotDetailController.swift; sourceTree = "<group>"; };
 		188C2DEC1C7F312500C18B9A /* ShotDetail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ShotDetail.storyboard; sourceTree = "<group>"; };
@@ -146,8 +146,8 @@
 				1844E9111C5F18DC00705FE3 /* Http */,
 				189115761C63853D0014C1EE /* Shots */,
 				188C2DDA1C7F1C9600C18B9A /* ShotDetail */,
-				1844E9011C5F18B200705FE3 /* ViewController.swift */,
 				185448EE1C85347100AB787A /* Resources */,
+				185448FD1C853EAD00AB787A /* Login */,
 				D9A56B65979042B7F9388F22 /* Bridging-Header.h */,
 			);
 			path = Fairy;
@@ -192,6 +192,14 @@
 				185448F51C85347100AB787A /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		185448FD1C853EAD00AB787A /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				185448FE1C853EAD00AB787A /* ViewController.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		188C2DDA1C7F1C9600C18B9A /* ShotDetail */ = {
@@ -423,6 +431,7 @@
 				18F9D4E01C832A2E0091B891 /* DribbbleCommentModel.swift in Sources */,
 				18889D031C74A9FC00CC6CBA /* ShotsCollectionCellViewModel.swift in Sources */,
 				188C2DF11C7F314F00C18B9A /* ShotDetailHeaderImageCell.swift in Sources */,
+				185448FF1C853EAD00AB787A /* ViewController.swift in Sources */,
 				185448F61C85347100AB787A /* AppDelegate.swift in Sources */,
 				18CB61E51C8089AB0038A5A6 /* DribbbleShotModel.swift in Sources */,
 				18CB61E71C8089AB0038A5A6 /* DribbbleUserModel.swift in Sources */,
@@ -437,7 +446,6 @@
 				188C2E011C80491E00C18B9A /* ShotDetailDescriptionCell.swift in Sources */,
 				18CB61E61C8089AB0038A5A6 /* DribbbleTeamModel.swift in Sources */,
 				18BF9C0B1C622CF6007E9194 /* Alamofire+Extension.swift in Sources */,
-				1844E9021C5F18B200705FE3 /* ViewController.swift in Sources */,
 				1844E91B1C5F8DB300705FE3 /* FairyNotification.swift in Sources */,
 				18928D101C64B57D003B2DFB /* Http.swift in Sources */,
 				18F9D4DD1C8326720091B891 /* ShotDetailCommentCell.swift in Sources */,
