@@ -8,7 +8,7 @@
         <!--Shot Detail Controller-->
         <scene sceneID="wOz-vp-Wxc">
             <objects>
-                <tableViewController id="KUK-Tj-bDh" customClass="ShotDetailController" customModule="Fairy" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="ShotDetailController" id="KUK-Tj-bDh" customClass="ShotDetailController" customModule="Fairy" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="I8l-sg-GnX">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

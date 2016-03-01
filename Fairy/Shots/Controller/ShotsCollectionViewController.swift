@@ -27,6 +27,7 @@ class ShotsCollectionViewController: UICollectionViewController {
     
     setupView()
     populateCells()
+    setup3DTouch()
   }
   
   override func didReceiveMemoryWarning() {
@@ -130,7 +131,7 @@ extension ShotsCollectionViewController {
     collectionView.alwaysBounceVertical = true
   }
   
-  func populateCells() {
+  private func populateCells() {
     // 防止还在加载当前界面时加载下一个页面
     guard !populatingCells else { return }
     
@@ -155,4 +156,32 @@ extension ShotsCollectionViewController {
     }
   }
   
+  private func setup3DTouch() {
+    if #available(iOS 9.0, *) {
+      if traitCollection.forceTouchCapability == .Available {
+        registerForPreviewingWithDelegate(self, sourceView: collectionView!)
+      }
+    }
+  }
+}
+
+@available(iOS 9.0, *)
+extension ShotsCollectionViewController: UIViewControllerPreviewingDelegate {
+  func previewingContext(previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
+    guard let indexPath = collectionView!.indexPathForItemAtPoint(location),
+      cell = collectionView!.cellForItemAtIndexPath(indexPath) as? ShotsCollectionViewCell
+    else { return nil}
+    
+    let identifier = String(ShotDetailController)
+    guard let detailVC = storyboard?.instantiateViewControllerWithIdentifier(identifier) as? ShotDetailController else { return nil }
+    detailVC.shotModel = shotsArray[indexPath.row]
+    
+    previewingContext.sourceRect = cell.frame
+    
+    return detailVC
+  }
+  
+  func previewingContext(previewingContext: UIViewControllerPreviewing, commitViewController viewControllerToCommit: UIViewController) {
+    showViewController(viewControllerToCommit, sender: self)
+  }
 }
