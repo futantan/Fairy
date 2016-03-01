@@ -15,7 +15,6 @@
 		185448F71C85347100AB787A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 185448F01C85347100AB787A /* Assets.xcassets */; };
 		185448F81C85347100AB787A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 185448F11C85347100AB787A /* LaunchScreen.storyboard */; };
 		185448F91C85347100AB787A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 185448F31C85347100AB787A /* Main.storyboard */; };
-		185448FA1C85347100AB787A /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 185448F51C85347100AB787A /* Info.plist */; };
 		185448FF1C853EAD00AB787A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185448FE1C853EAD00AB787A /* ViewController.swift */; };
 		18889D031C74A9FC00CC6CBA /* ShotsCollectionCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18889D021C74A9FC00CC6CBA /* ShotsCollectionCellViewModel.swift */; };
 		188C2DE31C7F1F4F00C18B9A /* ShotDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188C2DE21C7F1F4F00C18B9A /* ShotDetailController.swift */; };
@@ -30,6 +29,7 @@
 		188C2E021C80491E00C18B9A /* ShotDetailDescriptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 188C2E001C80491E00C18B9A /* ShotDetailDescriptionCell.xib */; };
 		18928D101C64B57D003B2DFB /* Http.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18928D0F1C64B57D003B2DFB /* Http.swift */; };
 		18928D151C64E01B003B2DFB /* ShotsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18928D141C64E01B003B2DFB /* ShotsCollectionViewController.swift */; };
+		18BCCC011C85D0790085F35E /* PullToRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BCCC001C85D0790085F35E /* PullToRefreshView.swift */; };
 		18BF9C091C622B6B007E9194 /* DribbbleAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BF9C081C622B6B007E9194 /* DribbbleAPI.swift */; };
 		18BF9C0B1C622CF6007E9194 /* Alamofire+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BF9C0A1C622CF6007E9194 /* Alamofire+Extension.swift */; };
 		18CB61DC1C8086460038A5A6 /* ShotDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CB61DB1C8086460038A5A6 /* ShotDetailModel.swift */; };
@@ -45,10 +45,10 @@
 		18F9D4E01C832A2E0091B891 /* DribbbleCommentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F9D4DF1C832A2E0091B891 /* DribbbleCommentModel.swift */; };
 		2B3D4F16F572CBAB786F21AB /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 510D133E9F323AFB1A278C5B /* CoreTelephony.framework */; };
 		42DD311CB9B6D5647174012E /* BuddyBuildSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D301976B532B62C68D58AB67 /* BuddyBuildSDK.framework */; };
+		6401EB4076ABF64C7D73CC7C /* Pods_Fairy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BAF1911908E39ABE07706BD /* Pods_Fairy.framework */; };
 		656DE2063BEFEB11A8E33E8F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A07CDD4FECBA84DAF90DC5C /* QuartzCore.framework */; };
 		7F512585A5864294F1EF2B1B /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDE83B0129BE6F269B618668 /* AssetsLibrary.framework */; };
 		A48D106455D79E7D94AF6041 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0688B319E97778CEFCD7ECD9 /* SystemConfiguration.framework */; };
-		DB4BCF56F304BDACD8CBE826 /* Pods_Fairy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 428847087D20C80599EE8867 /* Pods_Fairy.framework */; };
 		E6B21AF85C60BD593CE018A9 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBE05780C4C1234A7BA8C474 /* CoreText.framework */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +78,7 @@
 		188C2E001C80491E00C18B9A /* ShotDetailDescriptionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShotDetailDescriptionCell.xib; sourceTree = "<group>"; };
 		18928D0F1C64B57D003B2DFB /* Http.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Http.swift; sourceTree = "<group>"; };
 		18928D141C64E01B003B2DFB /* ShotsCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShotsCollectionViewController.swift; sourceTree = "<group>"; };
+		18BCCC001C85D0790085F35E /* PullToRefreshView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PullToRefreshView.swift; sourceTree = "<group>"; };
 		18BF9C081C622B6B007E9194 /* DribbbleAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DribbbleAPI.swift; sourceTree = "<group>"; };
 		18BF9C0A1C622CF6007E9194 /* Alamofire+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Alamofire+Extension.swift"; sourceTree = "<group>"; };
 		18CB61DB1C8086460038A5A6 /* ShotDetailModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShotDetailModel.swift; sourceTree = "<group>"; };
@@ -91,15 +92,15 @@
 		18F9D4DB1C8326720091B891 /* ShotDetailCommentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShotDetailCommentCell.swift; sourceTree = "<group>"; };
 		18F9D4DC1C8326720091B891 /* ShotDetailCommentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShotDetailCommentCell.xib; sourceTree = "<group>"; };
 		18F9D4DF1C832A2E0091B891 /* DribbbleCommentModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DribbbleCommentModel.swift; sourceTree = "<group>"; };
-		428847087D20C80599EE8867 /* Pods_Fairy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fairy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4BAF1911908E39ABE07706BD /* Pods_Fairy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fairy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		510D133E9F323AFB1A278C5B /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
-		87EA3F819AD18B1172A61BF1 /* Pods-Fairy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fairy.release.xcconfig"; path = "Pods/Target Support Files/Pods-Fairy/Pods-Fairy.release.xcconfig"; sourceTree = "<group>"; };
 		8A07CDD4FECBA84DAF90DC5C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		B99C9E9B25D2091F55D5DD5D /* Pods-Fairy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fairy.release.xcconfig"; path = "Pods/Target Support Files/Pods-Fairy/Pods-Fairy.release.xcconfig"; sourceTree = "<group>"; };
 		D301976B532B62C68D58AB67 /* BuddyBuildSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BuddyBuildSDK.framework; sourceTree = "<group>"; };
 		D9A56B65979042B7F9388F22 /* Bridging-Header.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Bridging-Header.h"; path = "../Bridging-Header.h"; sourceTree = "<group>"; };
+		DD4399C811935FDA3DD064D3 /* Pods-Fairy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fairy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Fairy/Pods-Fairy.debug.xcconfig"; sourceTree = "<group>"; };
 		EBE05780C4C1234A7BA8C474 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		EDE83B0129BE6F269B618668 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
-		EF0E894DA83CAA61AF1DDC6D /* Pods-Fairy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fairy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Fairy/Pods-Fairy.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,13 +108,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB4BCF56F304BDACD8CBE826 /* Pods_Fairy.framework in Frameworks */,
 				42DD311CB9B6D5647174012E /* BuddyBuildSDK.framework in Frameworks */,
 				7F512585A5864294F1EF2B1B /* AssetsLibrary.framework in Frameworks */,
 				E6B21AF85C60BD593CE018A9 /* CoreText.framework in Frameworks */,
 				2B3D4F16F572CBAB786F21AB /* CoreTelephony.framework in Frameworks */,
 				A48D106455D79E7D94AF6041 /* SystemConfiguration.framework in Frameworks */,
 				656DE2063BEFEB11A8E33E8F /* QuartzCore.framework in Frameworks */,
+				6401EB4076ABF64C7D73CC7C /* Pods_Fairy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,8 +126,8 @@
 			children = (
 				1844E8FE1C5F18B200705FE3 /* Fairy */,
 				1844E8FD1C5F18B200705FE3 /* Products */,
-				B2BACBF748381AA6559FE8E4 /* Pods */,
 				FF5C0FB47B17C63C8549B182 /* Frameworks */,
+				4E99C9A0F32313FCBDBEBFD8 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -141,6 +142,7 @@
 		1844E8FE1C5F18B200705FE3 /* Fairy */ = {
 			isa = PBXGroup;
 			children = (
+				18BCCBFE1C85D0790085F35E /* Public */,
 				1844E9171C5F886700705FE3 /* Tools */,
 				1844E9141C5F7AF800705FE3 /* Extension */,
 				1844E9111C5F18DC00705FE3 /* Http */,
@@ -257,6 +259,22 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		18BCCBFE1C85D0790085F35E /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				18BCCBFF1C85D0790085F35E /* View */,
+			);
+			path = Public;
+			sourceTree = "<group>";
+		};
+		18BCCBFF1C85D0790085F35E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				18BCCC001C85D0790085F35E /* PullToRefreshView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		18CB61DD1C8089AB0038A5A6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -270,11 +288,11 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		B2BACBF748381AA6559FE8E4 /* Pods */ = {
+		4E99C9A0F32313FCBDBEBFD8 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				EF0E894DA83CAA61AF1DDC6D /* Pods-Fairy.debug.xcconfig */,
-				87EA3F819AD18B1172A61BF1 /* Pods-Fairy.release.xcconfig */,
+				DD4399C811935FDA3DD064D3 /* Pods-Fairy.debug.xcconfig */,
+				B99C9E9B25D2091F55D5DD5D /* Pods-Fairy.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -282,13 +300,13 @@
 		FF5C0FB47B17C63C8549B182 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				428847087D20C80599EE8867 /* Pods_Fairy.framework */,
 				D301976B532B62C68D58AB67 /* BuddyBuildSDK.framework */,
 				EDE83B0129BE6F269B618668 /* AssetsLibrary.framework */,
 				EBE05780C4C1234A7BA8C474 /* CoreText.framework */,
 				510D133E9F323AFB1A278C5B /* CoreTelephony.framework */,
 				0688B319E97778CEFCD7ECD9 /* SystemConfiguration.framework */,
 				8A07CDD4FECBA84DAF90DC5C /* QuartzCore.framework */,
+				4BAF1911908E39ABE07706BD /* Pods_Fairy.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -300,12 +318,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1844E90E1C5F18B200705FE3 /* Build configuration list for PBXNativeTarget "Fairy" */;
 			buildPhases = (
-				22D45218B03858160F378AFB /* Check Pods Manifest.lock */,
+				8D8999E8F235486AEABBEB71 /* Check Pods Manifest.lock */,
 				1844E8F81C5F18B200705FE3 /* Sources */,
 				1844E8F91C5F18B200705FE3 /* Frameworks */,
 				1844E8FA1C5F18B200705FE3 /* Resources */,
-				73B89AFD49077FEC69821C4C /* Embed Pods Frameworks */,
-				0C3C16A5962F8BBF3FCEA808 /* Copy Pods Resources */,
+				C4FE6A05580A031596F4BC8C /* Embed Pods Frameworks */,
+				18D1D93FEF58B34344CB78EE /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -362,7 +380,6 @@
 				185448F91C85347100AB787A /* Main.storyboard in Resources */,
 				188C2DF21C7F314F00C18B9A /* ShotDetailHeaderImageCell.xib in Resources */,
 				188C2DFA1C7FF4C500C18B9A /* ShotInfoCell.xib in Resources */,
-				185448FA1C85347100AB787A /* Info.plist in Resources */,
 				185448F71C85347100AB787A /* Assets.xcassets in Resources */,
 				18F9D4DE1C8326720091B891 /* ShotDetailCommentCell.xib in Resources */,
 			);
@@ -371,7 +388,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0C3C16A5962F8BBF3FCEA808 /* Copy Pods Resources */ = {
+		18D1D93FEF58B34344CB78EE /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -386,7 +403,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Fairy/Pods-Fairy-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		22D45218B03858160F378AFB /* Check Pods Manifest.lock */ = {
+		8D8999E8F235486AEABBEB71 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -401,7 +418,7 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		73B89AFD49077FEC69821C4C /* Embed Pods Frameworks */ = {
+		C4FE6A05580A031596F4BC8C /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -428,6 +445,7 @@
 				18CB61DC1C8086460038A5A6 /* ShotDetailModel.swift in Sources */,
 				18CB61E41C8089AB0038A5A6 /* DribbbleLinks.swift in Sources */,
 				1844E9161C5F7B0F00705FE3 /* NSURL+Extension.swift in Sources */,
+				18BCCC011C85D0790085F35E /* PullToRefreshView.swift in Sources */,
 				18F9D4E01C832A2E0091B891 /* DribbbleCommentModel.swift in Sources */,
 				18889D031C74A9FC00CC6CBA /* ShotsCollectionCellViewModel.swift in Sources */,
 				188C2DF11C7F314F00C18B9A /* ShotDetailHeaderImageCell.swift in Sources */,
@@ -557,7 +575,7 @@
 		};
 		1844E90F1C5F18B200705FE3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EF0E894DA83CAA61AF1DDC6D /* Pods-Fairy.debug.xcconfig */;
+			baseConfigurationReference = DD4399C811935FDA3DD064D3 /* Pods-Fairy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -576,7 +594,7 @@
 		};
 		1844E9101C5F18B200705FE3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 87EA3F819AD18B1172A61BF1 /* Pods-Fairy.release.xcconfig */;
+			baseConfigurationReference = B99C9E9B25D2091F55D5DD5D /* Pods-Fairy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";

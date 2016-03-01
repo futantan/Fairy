@@ -15,6 +15,9 @@ private let CellMarginLeft: CGFloat = 14.0
 private let CellItemsMargin: CGFloat = 16.0
 
 class ShotsCollectionViewController: UICollectionViewController {
+  
+  var refreshView: PullToRefreshView!
+  
   // data source
   var shotsArray: [DribbbleShotModel] = []
   var populatingCells = false // 是否正在加载
@@ -22,11 +25,14 @@ class ShotsCollectionViewController: UICollectionViewController {
   
   var isLarge = false
   
+  var netRequest: Alamofire.Request?
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     
     setupView()
-    populateCells()
+    refreshView.beginRefreshing()
+    refreshCells()
     setup3DTouch()
   }
   
@@ -62,7 +68,7 @@ extension ShotsCollectionViewController {
   
   override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
     let cell = collectionView.dequeueReusableCellWithReuseIdentifier(String(ShotsCollectionViewCell), forIndexPath: indexPath) as! ShotsCollectionViewCell
-
+    
     cell.shotsCollectionCellModel = ShotsCollectionCellViewModel(dribbbleShotsModel: shotsArray[indexPath.row])
     
     // the last cell
@@ -91,7 +97,7 @@ extension ShotsCollectionViewController {
 
 // MARK: - UICollectionViewDelegateFlowLayout
 extension ShotsCollectionViewController: UICollectionViewDelegateFlowLayout {
-
+  
   func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
     let num: CGFloat = isLarge ? 1.0 : 2.0
     
@@ -105,7 +111,7 @@ extension ShotsCollectionViewController: UICollectionViewDelegateFlowLayout {
   func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
     return 14.0
   }
-
+  
   func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat {
     return CellItemsMargin
   }
@@ -113,11 +119,34 @@ extension ShotsCollectionViewController: UICollectionViewDelegateFlowLayout {
   func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
     return UIEdgeInsetsMake(CellMarginTop, CellMarginLeft, 0, CellMarginLeft)
   }
-
+  
   func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
     return CGSize(width: collectionView.bounds.size.width, height: 50.0)
   }
   
+}
+
+// MARK: - UIScrollViewDelegate
+extension ShotsCollectionViewController {
+  override func scrollViewDidScroll(scrollView: UIScrollView) {
+    refreshView.scrollViewDidScroll(scrollView)
+  }
+
+  override func scrollViewWillEndDragging(scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+    refreshView.scrollViewWillEndDragging(scrollView, withVelocity: velocity, targetContentOffset: targetContentOffset)
+  }
+}
+
+// MARK: - PullToRefreshViewDelegate
+
+extension ShotsCollectionViewController: PullToRefreshViewDelegate {
+  func pulllToRefreshViewDidRefresh(pulllToRefreshView: PullToRefreshView) {
+      refreshCells()
+  }
+  
+  func scrollView() -> UIScrollView {
+    return collectionView!
+  }
 }
 
 // MARK: - Helper
@@ -129,18 +158,37 @@ extension ShotsCollectionViewController {
     
     collectionView.backgroundColor = UIColor(red:0.96, green:0.96, blue:0.96, alpha:1)
     collectionView.alwaysBounceVertical = true
+    
+    addPullToRefreshView(collectionView)
   }
   
-  private func populateCells() {
+  private func addPullToRefreshView(collectionView: UICollectionView) {
+    let kRefreshViewHeight: CGFloat = 80
+    let refreshFrame = CGRectMake(0, -kRefreshViewHeight, CGRectGetWidth(view.frame), kRefreshViewHeight)
+    refreshView = PullToRefreshView(frame: refreshFrame)
+    collectionView.addSubview(refreshView)
+    refreshView.delegate = self
+  }
+  
+  private func refreshCells() {
+    netRequest?.cancel()
+    shotsArray.removeAll()
+    collectionView?.reloadData()
+    currentPage = 0
+    populateCells {
+      self.refreshView.endRefreshing()
+    }
+  }
+  
+  private func populateCells(completed: (Void -> Void)? = nil) {
     // 防止还在加载当前界面时加载下一个页面
     guard !populatingCells else { return }
     
     populatingCells = true
     currentPage++
     
-    
-    Alamofire.request(DribbbleAPI.Router.ListShots(page: currentPage, list: .Default, timeframe: .Default, date: "", sort: .Default)).responseCollection { (response: Response<[DribbbleShotModel], NSError>) in
-      func failed() { self.populatingCells = false }
+    netRequest = Alamofire.request(DribbbleAPI.Router.ListShots(page: currentPage, list: .Default, timeframe: .Default, date: "", sort: .Default)).responseCollection { (response: Response<[DribbbleShotModel], NSError>) in
+      func failed() { self.populatingCells = false; print("failed") }
       guard let shotsModels = response.result.value else { failed(); return }
       if response .result.error != nil { failed(); return }
       
@@ -150,6 +198,8 @@ extension ShotsCollectionViewController {
       
       dispatch_async(dispatch_get_main_queue()) {
         self.collectionView!.insertItemsAtIndexPaths(indexPaths)
+        // TODO: - bug
+        completed?()
       }
       self.currentPage++
       self.populatingCells = false
@@ -165,12 +215,13 @@ extension ShotsCollectionViewController {
   }
 }
 
+// MARK: - Peek & Pop
 @available(iOS 9.0, *)
 extension ShotsCollectionViewController: UIViewControllerPreviewingDelegate {
   func previewingContext(previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
     guard let indexPath = collectionView!.indexPathForItemAtPoint(location),
       cell = collectionView!.cellForItemAtIndexPath(indexPath) as? ShotsCollectionViewCell
-    else { return nil}
+      else { return nil}
     
     let identifier = String(ShotDetailController)
     guard let detailVC = storyboard?.instantiateViewControllerWithIdentifier(identifier) as? ShotDetailController else { return nil }
