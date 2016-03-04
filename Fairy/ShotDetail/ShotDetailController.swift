@@ -9,6 +9,7 @@
 import UIKit
 import Alamofire
 
+
 class ShotDetailController: UITableViewController {
   
   var shotModel: DribbbleShotModel!
@@ -71,7 +72,7 @@ class ShotDetailController: UITableViewController {
       
     case .Shot:
       let cell = tableView.dequeueReusableCellWithIdentifier(String(ShotDetailHeaderImageCell), forIndexPath: indexPath) as! ShotDetailHeaderImageCell
-      cell.shotImageView.kf_setImageWithURL(shotModel!.images.maxURL(), placeholderImage: nil)
+      cell.shotImageView.kf_setImageWithURL(shotModel!.images!.maxURL(), placeholderImage: nil)
       return cell
       
     case .ShotInfo:

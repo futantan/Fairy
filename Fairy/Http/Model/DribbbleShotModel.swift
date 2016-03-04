@@ -7,40 +7,58 @@
 //
 
 import Foundation
+import RealmSwift
 
 
-struct DribbbleShotModel: ResponseObjectSerializable, ResponseCollectionSerializable {
-  let id: Int
-  let title: String
-  let description: String?
-  let width: Int
-  let height: Int
-  let images: DribbbleImages
-  let views_count: Int
-  let likes_count: Int
-  let comments_count: Int
-  let attachments_count: Int
-  let rebounds_count: Int
-  let buckets_count: Int
-  let created_at: String
-  let updated_at: String
-  let html_url: String
-  let attachments_url: String
-  let buckets_url: String
-  let comments_url: String
-  let likes_url: String
-  let projects_url: String
-  let rebounds_url: String // 可能为null
-  let rebound_source_url: String?
-  let animated: Bool
-  let tags: [String]?
-  let user: DribbbleUserModel
-  let team: DribbbleTeamModel? //可以为null
+final class DribbbleShotModel: Object {
+  dynamic var id: Int = 0
+  dynamic var title: String = ""
+  dynamic var shotDescription: String?
+  dynamic var width: Int = 0
+  dynamic var height: Int = 0
+  dynamic var images: DribbbleImages?
+  dynamic var views_count: Int = 0
+  dynamic var likes_count: Int = 0
+  dynamic var comments_count: Int = 0
+  dynamic var attachments_count: Int = 0
+  dynamic var rebounds_count: Int = 0
+  dynamic var buckets_count: Int = 0
+  dynamic var created_at: String = ""
+  dynamic var updated_at: String = ""
+  dynamic var html_url: String = ""
+  dynamic var attachments_url: String = ""
+  dynamic var buckets_url: String = ""
+  dynamic var comments_url: String = ""
+  dynamic var likes_url: String = ""
+  dynamic var projects_url: String = ""
+  dynamic var rebounds_url: String? // 可能为null
+  dynamic var rebound_source_url: String? = ""
+  dynamic var animated: Bool = false
+  let _backingTags = List<RealmString>()
+  dynamic var user: DribbbleUserModel?
+  dynamic var team: DribbbleTeamModel? //可以为null = 0
+  
+  var tags: [String] {
+    get {
+      return _backingTags.map { $0.stringValue }
+    }
+    set {
+      _backingTags.removeAll()
+      _backingTags.appendContentsOf(newValue.map({ RealmString(value: [$0]) }))
+    }
+  }
+  
+  override static func ignoredProperties() -> [String] {
+    return ["tags"]
+  }
+}
 
-  init?(response: NSHTTPURLResponse, representation: AnyObject) {
+extension DribbbleShotModel: ResponseObjectSerializable, ResponseCollectionSerializable {
+  convenience init?(response: NSHTTPURLResponse, representation: AnyObject) {
+    self.init()
     self.id = representation.valueForKeyPath("id") as! Int
     self.title = representation.valueForKeyPath("title") as! String
-    self.description = representation.valueForKeyPath("description") as? String
+    self.shotDescription = representation.valueForKeyPath("description") as? String
     self.width = representation.valueForKeyPath("width") as! Int
     self.height = representation.valueForKeyPath("height") as! Int
     self.images = DribbbleImages(response: response, representation: representation.valueForKeyPath("images")!)!
@@ -58,10 +76,11 @@ struct DribbbleShotModel: ResponseObjectSerializable, ResponseCollectionSerializ
     self.comments_url = representation.valueForKeyPath("comments_url") as! String
     self.likes_url = representation.valueForKeyPath("likes_url") as! String
     self.projects_url = representation.valueForKeyPath("projects_url") as! String
-    self.rebounds_url = representation.valueForKeyPath("rebounds_url") as! String
+    self.rebounds_url = representation.valueForKeyPath("rebounds_url") as? String
     self.rebound_source_url = representation.valueForKeyPath("rebound_source_url") as? String
     self.animated = representation.valueForKeyPath("animated") as! Bool
-    self.tags = representation.valueForKeyPath("tags") as? [String]
+    let tagsArr =  representation.valueForKeyPath("tags") as! [String]
+    self._backingTags.appendContentsOf(tagsArr.map({ RealmString(value: [$0]) }))
     self.user = DribbbleUserModel(response: response, representation: representation.valueForKeyPath("user")!)!
     let teamRepresentation = representation.valueForKeyPath("team")
     if teamRepresentation is NSNull {

@@ -7,13 +7,17 @@
 //
 
 import Foundation
+import RealmSwift
 
 
-struct DribbbleLinks: ResponseObjectSerializable {
-  let web: String?
-  let twitter: String?
-  
-  init?(response: NSHTTPURLResponse, representation: AnyObject) {
+final class DribbbleLinks: Object {
+  dynamic var web: String?
+  dynamic var twitter: String?
+}
+
+extension DribbbleLinks: ResponseObjectSerializable {
+  convenience init?(response: NSHTTPURLResponse, representation: AnyObject) {
+    self.init()
     self.web = representation.valueForKey("web") as? String
     self.twitter = representation.valueForKey("twitter") as? String
   }

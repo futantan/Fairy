@@ -7,41 +7,46 @@
 //
 
 import Foundation
+import RealmSwift
 
-struct DribbbleTeamModel: ResponseObjectSerializable {
-  let id: Int
-  let name: String
-  let username: String
-  let html_url: String
-  let avatar_url: String
-  let bio: String
-  let location: String?
-  let links: DribbbleLinks
-  let buckets_count: Int
-  let comments_received_count: Int
-  let followers_count: Int
-  let followings_count: Int
-  let likes_count: Int
-  let likes_received_count: Int
-  let members_count: Int
-  let projects_count: Int
-  let rebounds_received_count: Int
-  let shots_count: Int
-  let can_upload_shot: Bool
-  let type: String
-  let pro: Bool
-  let buckets_url: String
-  let followers_url: String
-  let following_url: String
-  let likes_url: String
-  let projects_url: String
-  let shots_url: String
-  let members_url: String
-  let team_shots_url: String
-  let created_at: String
-  let updated_at: String
 
-  init?(response: NSHTTPURLResponse, representation: AnyObject) {
+final class DribbbleTeamModel: Object {
+  dynamic var id: Int = 0
+  dynamic var name: String = ""
+  dynamic var username: String = ""
+  dynamic var html_url: String = ""
+  dynamic var avatar_url: String = ""
+  dynamic var bio: String = ""
+  dynamic var location: String?
+  dynamic var links: DribbbleLinks?
+  dynamic var buckets_count: Int = 0
+  dynamic var comments_received_count: Int = 0
+  dynamic var followers_count: Int = 0
+  dynamic var followings_count: Int = 0
+  dynamic var likes_count: Int = 0
+  dynamic var likes_received_count: Int = 0
+  dynamic var members_count: Int = 0
+  dynamic var projects_count: Int = 0
+  dynamic var rebounds_received_count: Int = 0
+  dynamic var shots_count: Int = 0
+  dynamic var can_upload_shot: Bool = false
+  dynamic var type: String = ""
+  dynamic var pro: Bool = false
+  dynamic var buckets_url: String = ""
+  dynamic var followers_url: String = ""
+  dynamic var following_url: String = ""
+  dynamic var likes_url: String = ""
+  dynamic var projects_url: String = ""
+  dynamic var shots_url: String = ""
+  dynamic var members_url: String = ""
+  dynamic var team_shots_url: String = ""
+  dynamic var created_at: String = ""
+  dynamic var updated_at: String = ""
+}
+
+extension DribbbleTeamModel: ResponseObjectSerializable {
+  convenience init?(response: NSHTTPURLResponse, representation: AnyObject) {
+    self.init()
     self.id = representation.valueForKeyPath("id") as! Int
     self.name = representation.valueForKeyPath("name") as! String
     self.username = representation.valueForKeyPath("username") as! String

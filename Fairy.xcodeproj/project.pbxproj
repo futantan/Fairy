@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1831149D1C8960E4004EF152 /* RealmString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1831149C1C8960E4004EF152 /* RealmString.swift */; };
 		1844E9131C5F19F000705FE3 /* OAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1844E9121C5F19F000705FE3 /* OAuth.swift */; };
 		1844E9161C5F7B0F00705FE3 /* NSURL+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1844E9151C5F7B0F00705FE3 /* NSURL+Extension.swift */; };
 		1844E9191C5F887F00705FE3 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1844E9181C5F887F00705FE3 /* Defaults.swift */; };
@@ -54,6 +55,7 @@
 
 /* Begin PBXFileReference section */
 		0688B319E97778CEFCD7ECD9 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		1831149C1C8960E4004EF152 /* RealmString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmString.swift; sourceTree = "<group>"; };
 		1844E8FC1C5F18B200705FE3 /* Fairy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fairy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1844E9121C5F19F000705FE3 /* OAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuth.swift; sourceTree = "<group>"; };
 		1844E9151C5F7B0F00705FE3 /* NSURL+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSURL+Extension.swift"; sourceTree = "<group>"; };
@@ -121,6 +123,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		183114991C893085004EF152 /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				1831149C1C8960E4004EF152 /* RealmString.swift */,
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
 		1844E8F31C5F18B200705FE3 = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +152,7 @@
 		1844E8FE1C5F18B200705FE3 /* Fairy */ = {
 			isa = PBXGroup;
 			children = (
+				183114991C893085004EF152 /* Realm */,
 				18BCCBFE1C85D0790085F35E /* Public */,
 				1844E9171C5F886700705FE3 /* Tools */,
 				1844E9141C5F7AF800705FE3 /* Extension */,
@@ -452,6 +463,7 @@
 				185448FF1C853EAD00AB787A /* ViewController.swift in Sources */,
 				185448F61C85347100AB787A /* AppDelegate.swift in Sources */,
 				18CB61E51C8089AB0038A5A6 /* DribbbleShotModel.swift in Sources */,
+				1831149D1C8960E4004EF152 /* RealmString.swift in Sources */,
 				18CB61E71C8089AB0038A5A6 /* DribbbleUserModel.swift in Sources */,
 				18BF9C091C622B6B007E9194 /* DribbbleAPI.swift in Sources */,
 				18CB61E31C8089AB0038A5A6 /* DribbbleImages.swift in Sources */,

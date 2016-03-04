@@ -18,8 +18,8 @@ class ShotDetailCommentCell: UITableViewCell {
     didSet {
       guard let model = model else { return }
       
-      avatarImageView.kf_setImageWithURL(NSURL(string: model.user.avatar_url)!, placeholderImage: nil)
-      userNameLabel.text = model.user.username
+      avatarImageView.kf_setImageWithURL(NSURL(string: model.user!.avatar_url)!, placeholderImage: nil)
+      userNameLabel.text = model.user!.username
       commentLabel.text = model.body
     }
   }

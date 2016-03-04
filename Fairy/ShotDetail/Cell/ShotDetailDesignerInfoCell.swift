@@ -19,9 +19,9 @@ class ShotDetailDesignerInfoCell: UITableViewCell {
     didSet {
       guard let model = model else { return }
       
-      userAvatarImageView.kf_setImageWithURL(NSURL(string: model.user.avatar_url)!, placeholderImage: nil)
+      userAvatarImageView.kf_setImageWithURL(NSURL(string: model.user!.avatar_url)!, placeholderImage: nil)
       titleLabel.text = model.title
-      userNameLabel.text = "by \(model.user.username)"
+      userNameLabel.text = "by \(model.user!.username)"
       dateLabel.text = model.updated_at
     }
   }

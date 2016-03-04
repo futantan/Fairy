@@ -8,6 +8,9 @@
 
 import UIKit
 import Kingfisher
+import RealmSwift
+
+let uiRealm = try! Realm()
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

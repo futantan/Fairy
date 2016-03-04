@@ -13,6 +13,6 @@ struct ShotsCollectionCellViewModel {
   let imageURL: NSURL
   
   init(dribbbleShotsModel: DribbbleShotModel) {
-    self.imageURL = dribbbleShotsModel.images.imageURL(dribbbleShotsModel.animated)
+    self.imageURL = dribbbleShotsModel.images!.imageURL(dribbbleShotsModel.animated)
   }
 }

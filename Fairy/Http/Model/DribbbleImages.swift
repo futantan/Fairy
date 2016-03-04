@@ -7,18 +7,13 @@
 //
 
 import Foundation
+import RealmSwift
 
 
-struct DribbbleImages: ResponseObjectSerializable {
-  let hidpi: String?
-  let normal: String
-  let teaser: String
-  
-  init?(response: NSHTTPURLResponse, representation: AnyObject) {
-    self.hidpi = representation.valueForKeyPath("hidpi") as? String
-    self.normal = representation.valueForKeyPath("normal") as! String
-    self.teaser = representation.valueForKeyPath("teaser") as! String
-  }
+final class DribbbleImages: Object {
+  dynamic var hidpi: String?
+  dynamic var normal: String = ""
+  dynamic var teaser: String = ""
   
   func maxURL() -> NSURL {
     let result = hidpi ?? normal
@@ -33,5 +28,14 @@ struct DribbbleImages: ResponseObjectSerializable {
 //      return NSURL(string: normal)!
 //    }
       return NSURL(string: teaser)!
+  }
+}
+
+extension DribbbleImages: ResponseObjectSerializable {
+  convenience init?(response: NSHTTPURLResponse, representation: AnyObject) {
+    self.init()
+    self.hidpi = representation.valueForKeyPath("hidpi") as? String
+    self.normal = representation.valueForKeyPath("normal") as! String
+    self.teaser = representation.valueForKeyPath("teaser") as! String
   }
 }
