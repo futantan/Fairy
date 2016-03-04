@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1831149D1C8960E4004EF152 /* RealmString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1831149C1C8960E4004EF152 /* RealmString.swift */; };
 		1831149F1C89B9DB004EF152 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1831149E1C89B9DB004EF152 /* Log.swift */; };
+		183114A11C89BC62004EF152 /* RealmManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183114A01C89BC62004EF152 /* RealmManger.swift */; };
 		1844E9131C5F19F000705FE3 /* OAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1844E9121C5F19F000705FE3 /* OAuth.swift */; };
 		1844E9161C5F7B0F00705FE3 /* NSURL+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1844E9151C5F7B0F00705FE3 /* NSURL+Extension.swift */; };
 		1844E9191C5F887F00705FE3 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1844E9181C5F887F00705FE3 /* Defaults.swift */; };
@@ -58,6 +59,7 @@
 		0688B319E97778CEFCD7ECD9 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		1831149C1C8960E4004EF152 /* RealmString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmString.swift; sourceTree = "<group>"; };
 		1831149E1C89B9DB004EF152 /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		183114A01C89BC62004EF152 /* RealmManger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmManger.swift; sourceTree = "<group>"; };
 		1844E8FC1C5F18B200705FE3 /* Fairy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fairy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1844E9121C5F19F000705FE3 /* OAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuth.swift; sourceTree = "<group>"; };
 		1844E9151C5F7B0F00705FE3 /* NSURL+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSURL+Extension.swift"; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				1831149C1C8960E4004EF152 /* RealmString.swift */,
+				183114A01C89BC62004EF152 /* RealmManger.swift */,
 			);
 			path = Realm;
 			sourceTree = "<group>";
@@ -473,6 +476,7 @@
 				18928D151C64E01B003B2DFB /* ShotsCollectionViewController.swift in Sources */,
 				1844E9131C5F19F000705FE3 /* OAuth.swift in Sources */,
 				1844E9191C5F887F00705FE3 /* Defaults.swift in Sources */,
+				183114A11C89BC62004EF152 /* RealmManger.swift in Sources */,
 				18F1668B1C699C9B00E9185B /* ShotsFooterCollectionReusableView.swift in Sources */,
 				188C2DF51C7FE97200C18B9A /* ShotDetailDesignerInfoCell.swift in Sources */,
 				188C2DE31C7F1F4F00C18B9A /* ShotDetailController.swift in Sources */,

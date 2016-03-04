@@ -17,7 +17,8 @@ class RealmManager {
     return shredInstance
   }
   
-  func updateShotsModelInRealm(shotModels: DribbbleShotModel) {
+  // TODO: - use thread
+  func updateShotsModelInRealm(shotModels: [DribbbleShotModel]) {
     try! uiRealm.write {
       uiRealm.deleteAll()
       uiRealm.add(shotModels)

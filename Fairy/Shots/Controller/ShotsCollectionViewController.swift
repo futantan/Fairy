@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import RealmSwift
 
 
 private let CellMarginTop: CGFloat = 24.0
@@ -31,8 +32,9 @@ class ShotsCollectionViewController: UICollectionViewController {
     super.viewDidLoad()
     
     setupView()
-    populateCells()
     setup3DTouch()
+    
+    loadDataForFirstTime()
   }
   
   override func didReceiveMemoryWarning() {
@@ -52,7 +54,6 @@ class ShotsCollectionViewController: UICollectionViewController {
 
 // MARK: - Target-Action
 extension ShotsCollectionViewController {
-  
   @IBAction func changeDisplayMode(sender: UIBarButtonItem) {
     isLarge = !isLarge
     collectionView?.performBatchUpdates(nil, completion: nil)
@@ -177,24 +178,40 @@ extension ShotsCollectionViewController {
     }
   }
   
+  /// 从数据库中读取 shots 模型，如果没有，利用网络加载
+  private func loadDataForFirstTime() {
+    let shotsInRealm = RealmManager.sharedManager.shotModelsInRealm()
+    if shotsInRealm.isEmpty {
+      populateCells()
+    } else {
+      shotsArray = shotsInRealm
+      collectionView?.reloadData()
+    }
+  }
+  
   private func populateCells(shouldClearData shouldClearData: Bool = false, completed: (Void -> Void)? = nil) {
     // 防止还在加载当前界面时加载下一个页面
-    guard !populatingCells else { return }
+    guard !populatingCells else { self.refreshView.endRefreshing(); return }
     
     populatingCells = true
     currentPage++
     
     netRequest = Alamofire.request(DribbbleAPI.Router.ListShots(page: currentPage, list: .Default, timeframe: .Default, date: "", sort: .Default)).responseCollection { (response: Response<[DribbbleShotModel], NSError>) in
-      func failed() { self.populatingCells = false; print("failed") }
-      guard let shotsModels = response.result.value else { failed(); return }
+      // TODO: - 友好提示
+      func failed() { self.populatingCells = false; self.refreshView.endRefreshing(); print("failed") }
+      guard let shotModels = response.result.value else { failed(); return }
       if response .result.error != nil { failed(); return }
+      
+      if self.currentPage == 1 { // only save the data of first one page
+        RealmManager.sharedManager.updateShotsModelInRealm(shotModels)
+      }
       
       if shouldClearData {
         self.shotsArray.removeAll()
       }
       
       let lastItem = self.shotsArray.count
-      self.shotsArray.appendContentsOf(shotsModels)
+      self.shotsArray.appendContentsOf(shotModels)
       let indexPaths = (lastItem..<self.shotsArray.count).map { NSIndexPath(forItem: $0, inSection: 0) }
       
       dispatch_async(dispatch_get_main_queue()) {
