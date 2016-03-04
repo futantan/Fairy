@@ -207,7 +207,6 @@ extension ShotsCollectionViewController {
 
         completed?()
       }
-      self.currentPage++
       self.populatingCells = false
     }
   }
