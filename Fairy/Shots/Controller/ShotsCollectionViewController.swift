@@ -217,12 +217,13 @@ extension ShotsCollectionViewController {
       dispatch_async(dispatch_get_main_queue()) {
         
         if shouldClearData {
+          completed?()
           self.collectionView?.reloadData()
         } else {
           self.collectionView?.insertItemsAtIndexPaths(indexPaths)
         }
 
-        completed?()
+
       }
       self.populatingCells = false
     }

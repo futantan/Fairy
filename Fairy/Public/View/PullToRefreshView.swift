@@ -53,9 +53,11 @@ class PullToRefreshView: UIView {
   func shouldRefreshViewBeLocked(shouldLock: Bool) {
     guard let scrollView = delegate?.scrollView()  else { return }
     
-    var contentInset = scrollView.contentInset
-    contentInset.top = shouldLock ? (contentInset.top + self.frame.size.height) : (contentInset.top - self.frame.size.height)
-    scrollView.contentInset = contentInset
+    let scenHeight = shouldLock ? self.frame.size.height : (-self.frame.size.height)
+    UIView.animateWithDuration(0.3, delay: 0.0, options: [.CurveEaseInOut], animations: {
+      scrollView.contentInset.top += scenHeight
+    }, completion: nil)
+    
   }
   
 }
