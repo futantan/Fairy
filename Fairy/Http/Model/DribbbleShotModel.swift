@@ -23,8 +23,8 @@ final class DribbbleShotModel: Object {
   dynamic var attachments_count: Int = 0
   dynamic var rebounds_count: Int = 0
   dynamic var buckets_count: Int = 0
-  dynamic var created_at: String = ""
-  dynamic var updated_at: String = ""
+  dynamic var created_at: NSDate?
+  dynamic var updated_at: NSDate?
   dynamic var html_url: String = ""
   dynamic var attachments_url: String = ""
   dynamic var buckets_url: String = ""
@@ -68,8 +68,10 @@ extension DribbbleShotModel: ResponseObjectSerializable, ResponseCollectionSeria
     self.attachments_count = representation.valueForKeyPath("attachments_count") as! Int
     self.rebounds_count = representation.valueForKeyPath("rebounds_count") as! Int
     self.buckets_count = representation.valueForKeyPath("buckets_count") as! Int
-    self.created_at = representation.valueForKeyPath("created_at") as! String
-    self.updated_at = representation.valueForKeyPath("updated_at") as! String
+    let createDateString = representation.valueForKeyPath("created_at") as! String
+    self.created_at = NSDate.convertShotDateStringToNSDate(createDateString)
+    let updateDateString = representation.valueForKeyPath("updated_at") as! String
+    self.updated_at = NSDate.convertShotDateStringToNSDate(updateDateString)
     self.html_url = representation.valueForKeyPath("html_url") as! String
     self.attachments_url = representation.valueForKeyPath("attachments_url") as! String
     self.buckets_url = representation.valueForKeyPath("buckets_url") as! String

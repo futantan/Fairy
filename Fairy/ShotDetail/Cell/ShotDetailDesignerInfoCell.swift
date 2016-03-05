@@ -22,7 +22,7 @@ class ShotDetailDesignerInfoCell: UITableViewCell {
       userAvatarImageView.kf_setImageWithURL(NSURL(string: model.user!.avatar_url)!, placeholderImage: nil)
       titleLabel.text = model.title
       userNameLabel.text = "by \(model.user!.username)"
-      dateLabel.text = model.updated_at
+      dateLabel.text = NSDate.convertShotDateToString(model.updated_at!)
     }
   }
   

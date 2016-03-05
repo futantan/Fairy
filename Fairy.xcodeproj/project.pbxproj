@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		180EB1061C8B356900EB2FBF /* NSDate+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180EB1051C8B356900EB2FBF /* NSDate+Extension.swift */; };
 		1831149D1C8960E4004EF152 /* RealmString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1831149C1C8960E4004EF152 /* RealmString.swift */; };
 		1831149F1C89B9DB004EF152 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1831149E1C89B9DB004EF152 /* Log.swift */; };
 		183114A11C89BC62004EF152 /* RealmManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183114A01C89BC62004EF152 /* RealmManger.swift */; };
@@ -57,6 +58,7 @@
 
 /* Begin PBXFileReference section */
 		0688B319E97778CEFCD7ECD9 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		180EB1051C8B356900EB2FBF /* NSDate+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+Extension.swift"; sourceTree = "<group>"; };
 		1831149C1C8960E4004EF152 /* RealmString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmString.swift; sourceTree = "<group>"; };
 		1831149E1C89B9DB004EF152 /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		183114A01C89BC62004EF152 /* RealmManger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmManger.swift; sourceTree = "<group>"; };
@@ -187,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				1844E9151C5F7B0F00705FE3 /* NSURL+Extension.swift */,
+				180EB1051C8B356900EB2FBF /* NSDate+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -470,6 +473,7 @@
 				185448F61C85347100AB787A /* AppDelegate.swift in Sources */,
 				18CB61E51C8089AB0038A5A6 /* DribbbleShotModel.swift in Sources */,
 				1831149D1C8960E4004EF152 /* RealmString.swift in Sources */,
+				180EB1061C8B356900EB2FBF /* NSDate+Extension.swift in Sources */,
 				18CB61E71C8089AB0038A5A6 /* DribbbleUserModel.swift in Sources */,
 				18BF9C091C622B6B007E9194 /* DribbbleAPI.swift in Sources */,
 				18CB61E31C8089AB0038A5A6 /* DribbbleImages.swift in Sources */,
