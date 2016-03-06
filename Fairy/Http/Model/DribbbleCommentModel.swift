@@ -19,6 +19,14 @@ final class DribbbleCommentModel {
   dynamic var user: DribbbleUserModel?
 }
 
+extension DribbbleCommentModel {
+  var commentAttributesBody: NSAttributedString? {
+    get {
+      return body.attributeHtmlString()
+    }
+  }
+}
+
 extension DribbbleCommentModel: ResponseObjectSerializable, ResponseCollectionSerializable {
   convenience init?(response: NSHTTPURLResponse, representation: AnyObject) {
     self.init()

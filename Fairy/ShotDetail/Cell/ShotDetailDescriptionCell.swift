@@ -16,7 +16,7 @@ class ShotDetailDescriptionCell: UITableViewCell {
     didSet {
       guard let model = model else { return }
       
-      descriptionLabel.text = model.shotDescription
+      descriptionLabel.attributedText = model.shotAttributesDescription
     }
   }
   
