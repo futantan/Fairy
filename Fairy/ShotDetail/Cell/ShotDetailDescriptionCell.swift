@@ -14,9 +14,19 @@ class ShotDetailDescriptionCell: UITableViewCell {
   
   var model: DribbbleShotModel? {
     didSet {
-      guard let model = model else { return }
+      guard let model = model, let shotDescription = model.shotDescription else { return }
       
-      descriptionLabel.attributedText = model.shotAttributesDescription
+      let htmlPath = NSBundle.mainBundle().pathForResource("shotDescription", ofType: ".html")!
+      
+      do {
+        let htmlString = try String(contentsOfFile: htmlPath, encoding: NSUTF8StringEncoding)
+        let descriptionHtmlString = htmlString.stringByReplacingOccurrencesOfString("#shotDescription", withString: shotDescription)
+        let stringWithHtmlAttributes = NSMutableAttributedString()
+        try stringWithHtmlAttributes.readFromData(descriptionHtmlString.dataUsingEncoding(NSUTF8StringEncoding)!, options: [NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType], documentAttributes: nil)
+        descriptionLabel.attributedText = stringWithHtmlAttributes
+      } catch let error as NSError {
+        print(error.description)
+      }
     }
   }
   

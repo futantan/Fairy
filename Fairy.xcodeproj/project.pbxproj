@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		180EB1061C8B356900EB2FBF /* NSDate+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180EB1051C8B356900EB2FBF /* NSDate+Extension.swift */; };
 		180EB1081C8BBD8000EB2FBF /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180EB1071C8BBD8000EB2FBF /* String+Extension.swift */; };
+		180EB10D1C8D16DA00EB2FBF /* shotDescription.html in Resources */ = {isa = PBXBuildFile; fileRef = 180EB10C1C8D16DA00EB2FBF /* shotDescription.html */; };
 		1831149D1C8960E4004EF152 /* RealmString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1831149C1C8960E4004EF152 /* RealmString.swift */; };
 		1831149F1C89B9DB004EF152 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1831149E1C89B9DB004EF152 /* Log.swift */; };
 		183114A11C89BC62004EF152 /* RealmManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183114A01C89BC62004EF152 /* RealmManger.swift */; };
@@ -61,6 +62,7 @@
 		0688B319E97778CEFCD7ECD9 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		180EB1051C8B356900EB2FBF /* NSDate+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+Extension.swift"; sourceTree = "<group>"; };
 		180EB1071C8BBD8000EB2FBF /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		180EB10C1C8D16DA00EB2FBF /* shotDescription.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = shotDescription.html; sourceTree = "<group>"; };
 		1831149C1C8960E4004EF152 /* RealmString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmString.swift; sourceTree = "<group>"; };
 		1831149E1C89B9DB004EF152 /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		183114A01C89BC62004EF152 /* RealmManger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmManger.swift; sourceTree = "<group>"; };
@@ -131,6 +133,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		180EB10B1C8D168F00EB2FBF /* HtmlTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				180EB10C1C8D16DA00EB2FBF /* shotDescription.html */,
+			);
+			path = HtmlTemplate;
+			sourceTree = "<group>";
+		};
 		183114991C893085004EF152 /* Realm */ = {
 			isa = PBXGroup;
 			children = (
@@ -161,6 +171,7 @@
 		1844E8FE1C5F18B200705FE3 /* Fairy */ = {
 			isa = PBXGroup;
 			children = (
+				180EB10B1C8D168F00EB2FBF /* HtmlTemplate */,
 				183114991C893085004EF152 /* Realm */,
 				18BCCBFE1C85D0790085F35E /* Public */,
 				1844E9171C5F886700705FE3 /* Tools */,
@@ -405,6 +416,7 @@
 				188C2DFA1C7FF4C500C18B9A /* ShotInfoCell.xib in Resources */,
 				185448F71C85347100AB787A /* Assets.xcassets in Resources */,
 				18F9D4DE1C8326720091B891 /* ShotDetailCommentCell.xib in Resources */,
+				180EB10D1C8D16DA00EB2FBF /* shotDescription.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

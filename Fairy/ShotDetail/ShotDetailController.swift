@@ -84,10 +84,12 @@ class ShotDetailController: UITableViewController {
       let cell = tableView.dequeueReusableCellWithIdentifier(String(ShotDetailDescriptionCell), forIndexPath: indexPath) as! ShotDetailDescriptionCell
       cell.model = shotModel
       return cell
+      
     case .CommentHeader:
       let cell = UITableViewCell()
       cell.textLabel?.text = "comment"
       return cell
+      
     case .Comments:
       let cell = tableView.dequeueReusableCellWithIdentifier(String(ShotDetailCommentCell), forIndexPath: indexPath) as! ShotDetailCommentCell
       cell.model = commentsArray[indexPath.row]
