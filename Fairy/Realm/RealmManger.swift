@@ -19,13 +19,14 @@ class RealmManager {
   
   // TODO: - use thread
   func updateShotsModelInRealm(shotModels: [DribbbleShotModel]) {
-    try! uiRealm.write {
-      uiRealm.deleteAll()
-      uiRealm.add(shotModels)
-    }
+//    try! uiRealm.write {
+//      uiRealm.deleteAll()
+//      uiRealm.add(shotModels)
+//    }
   }
   
   func shotModelsInRealm() -> [DribbbleShotModel] {
-    return Array(uiRealm.objects(DribbbleShotModel))
+//    return Array(uiRealm.objects(DribbbleShotModel))
+    return []
   }
 }
