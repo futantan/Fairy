@@ -10,6 +10,7 @@
 		180EB1061C8B356900EB2FBF /* NSDate+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180EB1051C8B356900EB2FBF /* NSDate+Extension.swift */; };
 		180EB1081C8BBD8000EB2FBF /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180EB1071C8BBD8000EB2FBF /* String+Extension.swift */; };
 		180EB10D1C8D16DA00EB2FBF /* shotDescription.html in Resources */ = {isa = PBXBuildFile; fileRef = 180EB10C1C8D16DA00EB2FBF /* shotDescription.html */; };
+		182FDA1A1C8D733200BCE151 /* comment.html in Resources */ = {isa = PBXBuildFile; fileRef = 182FDA191C8D733200BCE151 /* comment.html */; };
 		1831149D1C8960E4004EF152 /* RealmString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1831149C1C8960E4004EF152 /* RealmString.swift */; };
 		1831149F1C89B9DB004EF152 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1831149E1C89B9DB004EF152 /* Log.swift */; };
 		183114A11C89BC62004EF152 /* RealmManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183114A01C89BC62004EF152 /* RealmManger.swift */; };
@@ -63,6 +64,7 @@
 		180EB1051C8B356900EB2FBF /* NSDate+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+Extension.swift"; sourceTree = "<group>"; };
 		180EB1071C8BBD8000EB2FBF /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		180EB10C1C8D16DA00EB2FBF /* shotDescription.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = shotDescription.html; sourceTree = "<group>"; };
+		182FDA191C8D733200BCE151 /* comment.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = comment.html; sourceTree = "<group>"; };
 		1831149C1C8960E4004EF152 /* RealmString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmString.swift; sourceTree = "<group>"; };
 		1831149E1C89B9DB004EF152 /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		183114A01C89BC62004EF152 /* RealmManger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmManger.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 		180EB10B1C8D168F00EB2FBF /* HtmlTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				182FDA191C8D733200BCE151 /* comment.html */,
 				180EB10C1C8D16DA00EB2FBF /* shotDescription.html */,
 			);
 			path = HtmlTemplate;
@@ -411,6 +414,7 @@
 				188C2E021C80491E00C18B9A /* ShotDetailDescriptionCell.xib in Resources */,
 				185448F81C85347100AB787A /* LaunchScreen.storyboard in Resources */,
 				188C2DED1C7F312500C18B9A /* ShotDetail.storyboard in Resources */,
+				182FDA1A1C8D733200BCE151 /* comment.html in Resources */,
 				185448F91C85347100AB787A /* Main.storyboard in Resources */,
 				188C2DF21C7F314F00C18B9A /* ShotDetailHeaderImageCell.xib in Resources */,
 				188C2DFA1C7FF4C500C18B9A /* ShotInfoCell.xib in Resources */,
