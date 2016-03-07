@@ -51,7 +51,7 @@ final class DribbbleShotModel: Object {
   var shotAttributesDescription: NSAttributedString? {
     get {
       guard let shotDescription = shotDescription else { return nil }
-      return shotDescription.attributeHtmlString()
+      return AttributeHtmlHelper.attributedText(.ShotDescription, content: shotDescription)
     }
   }
   

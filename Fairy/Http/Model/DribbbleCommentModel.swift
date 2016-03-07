@@ -22,7 +22,7 @@ final class DribbbleCommentModel {
 extension DribbbleCommentModel {
   var commentAttributesBody: NSAttributedString? {
     get {
-      return body.attributeHtmlString()
+      return AttributeHtmlHelper.attributedText(.Comment, content: body)
     }
   }
 }

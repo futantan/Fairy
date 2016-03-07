@@ -18,24 +18,9 @@ class ShotDetailCommentCell: UITableViewCell {
     didSet {
       guard let commentModel = model else { return }
       
-      let comment = commentModel.body
-      
       avatarImageView.kf_setImageWithURL(NSURL(string: commentModel.user!.avatar_url)!, placeholderImage: nil)
       userNameLabel.text = commentModel.user!.username
-      commentLabel.attributedText = commentModel.commentAttributesBody
-      
-      let htmlPath = NSBundle.mainBundle().pathForResource("comment", ofType: ".html")!
-      
-      do {
-        let htmlString = try String(contentsOfFile: htmlPath, encoding: NSUTF8StringEncoding)
-        let descriptionHtmlString = htmlString.stringByReplacingOccurrencesOfString("#comment", withString: comment)
-        let stringWithHtmlAttributes = NSMutableAttributedString()
-        try stringWithHtmlAttributes.readFromData(descriptionHtmlString.dataUsingEncoding(NSUTF8StringEncoding)!, options: [NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType], documentAttributes: nil)
-        commentLabel.attributedText = stringWithHtmlAttributes
-      } catch let error as NSError {
-        print(error.description)
-      }
-      
+      commentLabel.attributedText = commentModel.commentAttributesBody  
     }
   }
   
