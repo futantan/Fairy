@@ -108,7 +108,7 @@ class ShotDetailController: UITableViewController {
 // MARK: - Helper
 extension ShotDetailController {
   private func setupViews() {
-    tableView.estimatedRowHeight = 44.0
+    tableView.estimatedRowHeight = 64.0
     tableView.rowHeight = UITableViewAutomaticDimension
     tableView.separatorStyle = .None
   }

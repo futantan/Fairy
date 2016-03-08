@@ -10,19 +10,19 @@ import UIKit
 
 class ShotDetailDescriptionCell: UITableViewCell {
   
-  @IBOutlet weak var descriptionLabel: UILabel!
+  @IBOutlet weak var descriptionTextView: UITextView!
   
   var model: DribbbleShotModel? {
     didSet {
       guard let model = model else { return }
       
-      descriptionLabel.attributedText = model.shotAttributesDescription
+      descriptionTextView.attributedText = model.shotAttributesDescription
     }
   }
   
   override func awakeFromNib() {
     super.awakeFromNib()
-    // Initialization code
+    
   }
   
   override func setSelected(selected: Bool, animated: Bool) {
