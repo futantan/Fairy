@@ -43,12 +43,14 @@ class ShotDetailController: UITableViewController {
     case CommentHeader
     /// Comments
     case Comments
+    
+    static var count: Int { return ShotDetailSection.Comments.rawValue + 1 }
   }
   
   // MARK: - Table view data source
   
   override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-    return 6
+    return ShotDetailSection.count
   }
   
   override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
