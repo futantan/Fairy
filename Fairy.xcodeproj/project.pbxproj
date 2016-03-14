@@ -161,7 +161,9 @@
 				FF5C0FB47B17C63C8549B182 /* Frameworks */,
 				4E99C9A0F32313FCBDBEBFD8 /* Pods */,
 			);
+			indentWidth = 2;
 			sourceTree = "<group>";
+			tabWidth = 2;
 		};
 		1844E8FD1C5F18B200705FE3 /* Products */ = {
 			isa = PBXGroup;

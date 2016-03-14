@@ -56,8 +56,10 @@ class ShotDetailController: UITableViewController {
   override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     let section = ShotDetailSection(rawValue: section)!
     switch section {
-    case .DesignerInfo, .Shot, .ShotInfo, .Description, .CommentHeader:
+    case .DesignerInfo, .Shot, .ShotInfo, .CommentHeader:
       return 1
+    case .Description: // hide if no description
+      return shotModel.shotDescription == nil ? 0 : 1
     case .Comments:
       return commentsArray.count
     }

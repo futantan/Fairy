@@ -45,9 +45,5 @@ class ShotInfoCell: UITableViewCell {
   @IBAction func bucketContainerPressed(sender: AnyObject) {
     print("bucket")
   }
-  
 
-  
-  
-  
 }
