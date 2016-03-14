@@ -141,7 +141,7 @@ extension ShotsCollectionViewController {
 
 extension ShotsCollectionViewController: PullToRefreshViewDelegate {
   func pulllToRefreshViewDidRefresh(pulllToRefreshView: PullToRefreshView) {
-      refreshCells()
+    refreshCells()
   }
   
   func scrollView() -> UIScrollView {
@@ -182,7 +182,7 @@ extension ShotsCollectionViewController {
   private func loadDataForFirstTime() {
     let shotsInRealm = RealmManager.sharedManager.shotModelsInRealm()
     if shotsInRealm.isEmpty {
-      populateCells()
+      refreshView.beginRefreshing()
     } else {
       shotsArray = shotsInRealm
       collectionView?.reloadData()

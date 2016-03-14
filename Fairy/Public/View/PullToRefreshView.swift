@@ -42,6 +42,7 @@ class PullToRefreshView: UIView {
   func beginRefreshing() {
     isRefreshing = true
     shouldRefreshViewBeLocked(true)
+    delegate?.pulllToRefreshViewDidRefresh(self)
   }
   
   // 当刷新工作完成之后调用
